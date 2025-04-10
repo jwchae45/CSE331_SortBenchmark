@@ -1,15 +1,15 @@
 CXX := g++
-CXXFLAGS := -std=c++20 -Wall -Wextra -I./afx -I. -O2
+CXXFLAGS := -std=c++20 -Wall -Wextra -I./include -I. -O2
 LDFLAGS :=
 
-SRC_DIR := .
-AFX_DIR := ./afx
+SRC_DIR := ./src
+AFX_DIR := ./include
 BUILD_DIR := build
 BINS := benchmark datagen
 
 COMMON_SRCS := $(wildcard $(AFX_DIR)/*.cpp)
 
-BENCHMARK_SRC := $(SRC_DIR)/main.cpp
+BENCHMARK_SRC := $(SRC_DIR)/benchmark.cpp
 DATAGEN_SRC := $(SRC_DIR)/datagen.cpp
 
 BENCHMARK_OBJS := $(patsubst %.cpp, $(BUILD_DIR)/%.o, $(notdir $(BENCHMARK_SRC) $(COMMON_SRCS)))
@@ -42,14 +42,16 @@ release: CXXFLAGS += -O3
 release: clean all
 
 datagen-run:
-	./datagen --bsize=32 --dist=uniform --iter=1K
-	./datagen --bsize=32 --dist=uniform --iter=10K
-	./datagen --bsize=32 --dist=uniform --iter=100K
-	./datagen --bsize=32 --dist=uniform --iter=1M
-	./datagen --bsize=64 --dist=uniform --iter=1K
-	./datagen --bsize=64 --dist=uniform --iter=10K
-	./datagen --bsize=64 --dist=uniform --iter=100K
-	./datagen --bsize=64 --dist=uniform --iter=1M
+	$(MAKE) datagen
+	$(MAKE) datagen-clean
+	./datagen --seed=2313860 --bsize=32 --dist=uniform --iter=1K
+	./datagen --seed=2313861 --bsize=32 --dist=uniform --iter=10K
+	./datagen --seed=2313862 --bsize=32 --dist=uniform --iter=100K
+	./datagen --seed=2313863 --bsize=32 --dist=uniform --iter=1M
+	./datagen --seed=2313864 --bsize=64 --dist=uniform --iter=1K
+	./datagen --seed=2313865 --bsize=64 --dist=uniform --iter=10K
+	./datagen --seed=2313866 --bsize=64 --dist=uniform --iter=100K
+	./datagen --seed=2313867 --bsize=64 --dist=uniform --iter=1M
 
 datagen-clean:
 	rm -rf ./dataset/*

@@ -7,23 +7,19 @@ class Trace {
 public:
     Trace() {}
 
+    template<std::int_fast64_t Diff>
     inline void access()
-    { ++cnt_access; }
+    { cnt_access += Diff; }
 
+    template<std::int_fast64_t Diff>
     inline void comp()
-    { ++cnt_comp; }
-
-    inline void swap()
-    { ++cnt_swap; }
+    { cnt_comp += Diff; }
 
     inline std::int_fast64_t count_access() const
     { return cnt_access; }
 
     inline std::int_fast64_t count_comp() const
     { return cnt_comp; }
-
-    inline std::int_fast64_t count_swap() const
-    { return cnt_swap; }
 
 private:
     std::int_fast64_t cnt_access = 0;

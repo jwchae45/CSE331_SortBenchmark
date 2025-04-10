@@ -140,10 +140,10 @@ std::int64_t parse_suffix(const std::string& str) {
     
     std::int64_t number = std::stoll(match[1].str());
     switch (std::toupper(match[2].str()[0])) {
-    case 'T': number <<= 10; [[fallthrough]];
-    case 'B': number <<= 10; [[fallthrough]];
-    case 'M': number <<= 10; [[fallthrough]];
-    case 'K': number <<= 10;
+    case 'T': number *= 1000; [[fallthrough]];
+    case 'B': number *= 1000; [[fallthrough]];
+    case 'M': number *= 1000; [[fallthrough]];
+    case 'K': number *= 1000;
     }
     return number;
 }

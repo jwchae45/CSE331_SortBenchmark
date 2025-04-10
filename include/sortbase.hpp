@@ -12,19 +12,23 @@ public:
 
     template<class IntType>
     inline const IntType& at(std::size_t _idx)
-    { tr.access(); return mnt.at<IntType>(_idx); }
+    { tr.access<1>(); return mnt.at<IntType>(_idx); }
 
     template<class IntType>
     inline void set(std::size_t _idx, IntType& _val)
-    { tr.access(); mnt.at<IntType>(_idx) = _val; }
+    { tr.access<1>(); mnt.at<IntType>(_idx) = _val; }
 
     template<class IntType>
     inline bool comp(std::size_t _idx1, std::size_t _idx2)
-    { tr.comp(); return mnt.at<IntType>(_idx1) < mnt.at<IntType>(_idx2); }
+    { tr.comp<1>(); return mnt.at<IntType>(_idx1) < mnt.at<IntType>(_idx2); }
+
+    template<class IntType>
+    inline bool comp_direct(const IntType& _i1, const IntType& _i2)
+    { tr.comp<1>(); tr.access<2>(); return _i1 < _i2; }
 
     template<class IntType>
     inline void swap(std::size_t _idx1, std::size_t _idx2) {
-        tr.swap();
+        tr.access<3>();
         IntType& a = mnt.at<IntType>(_idx1);
         IntType& b = mnt.at<IntType>(_idx2);
         IntType t = a; a = b; b = t;

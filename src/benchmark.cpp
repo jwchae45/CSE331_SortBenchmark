@@ -82,18 +82,17 @@ int main(int argc, char** argv) {
     if (verbose) std::cout << lapse() << "Finished\n";
     
     double total_duration = 0., mean_duration = 0.;
-    double mean_access = 0., mean_comp = 0., mean_swap = 0.;
+    double mean_access = 0., mean_comp = 0;
     for (auto bres : result) {
         total_duration += bres.duration.count();
         mean_access    += double(bres.trace.count_access()) / iter;
         mean_comp      += double(bres.trace.count_comp  ()) / iter;
-        mean_swap      += double(bres.trace.count_swap  ()) / iter;
     }
     mean_duration = total_duration / iter;
 
     if (verbose) {
         int w_dur = check_width(total_duration, 3);
-        int m_dur = check_width(std::max({mean_access, mean_comp, mean_swap}), 0);
+        int m_dur = check_width(std::max({mean_access, mean_comp}), 0);
         std::cout << "=============== BENCHMARK RESULT ===============\n"
                   << "     Input Size (N) : " << mnt.meta.size << "\n"
                   << " Total Elapsed Time : " << total_duration << " ms\n"
@@ -101,7 +100,6 @@ int main(int argc, char** argv) {
                   << std::setprecision(0)
                   << "   # Array Accesses : " << std::setw(m_dur) << mean_access << ". / iteration\n"
                   << "      # Comparisons : " << std::setw(m_dur) << mean_comp << ". / iteration\n"
-                  << "            # Swaps : " << std::setw(m_dur) << mean_swap << ". / iteration\n"
                   << "================================================\n";
     }
     return 0;

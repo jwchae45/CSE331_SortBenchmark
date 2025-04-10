@@ -56,4 +56,8 @@ datagen-run:
 datagen-clean:
 	rm -rf ./dataset/*
 
-.PHONY: all clean debug release benchmark datagen datagen-run datagen-clean
+test:
+	./benchmark --iteration=100 --dataset=./dataset/int32_10K_uniform_1 --method=bubble --verbose > ./result/int32_1K_uniform_1.bubble
+
+
+.PHONY: all clean debug release benchmark datagen datagen-run datagen-clean test

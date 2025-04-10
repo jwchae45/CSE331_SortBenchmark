@@ -1,5 +1,5 @@
-#ifndef DATASET_HPP
-#define DATASET_HPP
+#ifndef FILESYS_HPP
+#define FILESYS_HPP
 
 #include <fstream>
 #include <filesystem>
@@ -46,47 +46,88 @@ private:
 
 class Metadata {
 public:
-    Metadata(const std::string& _file) {
-        std::regex pattern(R"(?:.*/)?int(\d+)_(\d+)([KMBT])_([a-zA-Z]+)_(\d+)$)");
-        std::smatch match;
+    Metadata(const std::string& _file)
+        : filename(ext_filename(_file)),
+          bsize(ext_bsize(_file)),
+          size(ext_size(_file)),
+          dist(ext_dist(_file)),
+          id(ext_id(_file))
+    {}
 
-        if (!std::regex_match(_file, match, pattern))
+private:
+    std::smatch& match(const std::string& _file) {
+        static const std::regex pattern(R"((?:.*/)?int(\d+)_(\d+)([KMBT])_([a-zA-Z]+)_(\d+).*)");
+        static std::smatch match;
+        static bool executed = false;
+        if (executed) return match;
+
+        if (!std::regex_search(_file, match, pattern))
             throw std::invalid_argument("Cannot extract metadata: " + _file);
         
-        filename = match[0].str();
-        bsize    = static_cast<decltype(bsize)>(std::stoi(match[1].str()));
-        size     = parse_suffix(match[2].str() + match[3].str());
-        dist     = match[4].str();
-        id       = static_cast<decltype(id)>(std::stoi(match[5].str()));
+        executed = true;
+        return match;
+    }
+
+    std::string ext_filename(const std::string& _file) {
+        return match(_file)[0].str();
+    }
+
+    std::int16_t ext_bsize(const std::string& _file) {
+        return static_cast<std::int16_t>(std::stoi(match(_file)[1].str()));
+    }
+
+    std::int64_t ext_size(const std::string& _file) {
+        return parse_suffix(match(_file)[2].str() + match(_file)[3].str());
+    }
+
+    std::string ext_dist(const std::string& _file) {
+        return match(_file)[4].str();
+    }
+
+    std::int16_t ext_id(const std::string& _file) {
+        return static_cast<std::int16_t>(std::stoi(match(_file)[5].str()));
     }
 
 public:
-    std::string filename;
-    std::int16_t bsize;
-    std::int64_t size;
-    std::string dist;
-    std::int16_t id;
+    const std::string filename;
+    const std::int16_t bsize;
+    const std::int64_t size;
+    const std::string dist;
+    const std::int16_t id;
 };
 
 class Mount {
 public:
     Mount(const std::string& _filename)
-        : fin(_filename, std::ios::binary),
-          meta(_filename),
+        : meta(_filename),
+          fin(_filename, std::ios::binary),
           data(meta.size * meta.bsize) {
+        if (!std::filesystem::exists(_filename)) throw std::runtime_error("No such a file: " + _filename);
         if (!fin) throw std::runtime_error("Cannot open the file: " + _filename);
         fin.read(reinterpret_cast<char*>(data.data()), data.size());
-        fin.close();
     }
 
     template<class T>
-    T at(std::size_t _index) const {
+    T& at(std::int64_t _index) {
+        return *(reinterpret_cast<T*>(data.data()) + _index);
+    }
+
+    template<class T>
+    const T& at(std::int64_t _index) const {
         return *(reinterpret_cast<const T*>(data.data()) + _index);
     }
 
+    void reset(void) {
+        fin.clear();
+        fin.seekg(0, std::ios::beg);
+        fin.read(reinterpret_cast<char*>(data.data()), data.size());
+    }
+
+public:
+    Metadata meta;
+
 private:
     std::ifstream fin;
-    Metadata meta;
     std::vector<uint8_t> data;
 };
 

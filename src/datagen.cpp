@@ -8,7 +8,7 @@
 #include <exception>
 
 #include "argparse.hpp"
-#include "dataset.hpp"
+#include "filesys.hpp"
 
 template<class IntType>
 void generate(const std::int64_t& iter,
@@ -34,13 +34,12 @@ void generate(const std::int64_t& iter,
         generator = [&]() { std::cout << normal_dist(engine) << "\n"; return static_cast<IntType>(std::llround(normal_dist(engine))); }; // loose cast?
     } else { throw std::runtime_error("Unsupported distribution: " + dist); }
     
-    if (verbose) {}
+    if (verbose) std::cout << "Generating..."; // TODO: add progress bar
     Stream<IntType> unsorted(dest + ".unsorted");
     std::vector<IntType> list(iter);
     IntType g;
     for (std::int64_t i = 0; i < iter; ++i) {
         g = generator();
-        if (verbose && i % 10000 == 0) std::cout << std::bitset<64>(g) << "\n";
         list[i] = g;
         unsorted << g;
     }
@@ -52,6 +51,7 @@ void generate(const std::int64_t& iter,
         sorted << list[i];
     }
     sorted.flush();
+    if (verbose) std::cout << " [Done]\n";
 }
 
 int main(int argc, char** argv) {
@@ -64,9 +64,9 @@ int main(int argc, char** argv) {
         .choices("uniform", "normal") // TODO: exponential, zipfian, randomwalk, fewunique
         .default_value("uniform");
     
-    // args.add_argument("--misc")
-    //     .choices("none", "almost_sorted", "reverse_sorted")
-    //     .default_value("none")
+    // args.add_argument("--sorted")
+    //     .choices("random", "almost", "reversed", "partial")
+    //     .default_value("random")
     //     .implicit_value(true);
     //
     // almost_sorted => (1) sliding window + random swap

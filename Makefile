@@ -42,22 +42,26 @@ release: CXXFLAGS += -O3
 release: clean all
 
 datagen-run:
-	$(MAKE) datagen
 	$(MAKE) datagen-clean
-	./datagen --seed=2313860 --bsize=32 --dist=uniform --iter=1K
-	./datagen --seed=2313861 --bsize=32 --dist=uniform --iter=10K
-	./datagen --seed=2313862 --bsize=32 --dist=uniform --iter=100K
-	./datagen --seed=2313863 --bsize=32 --dist=uniform --iter=1M
-	./datagen --seed=2313864 --bsize=64 --dist=uniform --iter=1K
-	./datagen --seed=2313865 --bsize=64 --dist=uniform --iter=10K
-	./datagen --seed=2313866 --bsize=64 --dist=uniform --iter=100K
-	./datagen --seed=2313867 --bsize=64 --dist=uniform --iter=1M
+	./datagen --seed=23138600 --bsize=32 --dist=uniform --N=1K
+	./datagen --seed=23138602 --bsize=32 --dist=uniform --N=4K
+	./datagen --seed=23138604 --bsize=32 --dist=uniform --N=16K
+	./datagen --seed=23138602 --bsize=32 --dist=uniform --N=64K
+	./datagen --seed=23138604 --bsize=32 --dist=uniform --N=256K
+	./datagen --seed=23138605 --bsize=32 --dist=uniform --N=1M
 
 datagen-clean:
 	rm -rf ./dataset/*
 
-test:
-	./benchmark --iteration=100 --dataset=./dataset/int32_10K_uniform_1 --method=bubble --verbose > ./result/int32_1K_uniform_1.bubble
+benchmark-test:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=bubble --verbose > ./result/int32_1K_uniform_random_1.bubble
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=bubble --verbose > ./result/int32_4K_uniform_random_1.bubble
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=bubble --verbose > ./result/int32_16K_uniform_random_1.bubble
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=bubble --verbose > ./result/int32_64K_uniform_random_1.bubble
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=bubble --verbose > ./result/int32_256K_uniform_random_1.bubble
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=bubble --verbose > ./result/int32_1M_uniform_random_1.bubble
 
+benchmark-clean:
+	echo "timestamp,sorting method,N,data bits,distribution,order,iteration,mean elapsed time (ms),#(array accesses) / iteration,#(comparisons) / iteration" > benchmark_result.csv
 
-.PHONY: all clean debug release benchmark datagen datagen-run datagen-clean test
+.PHONY: all clean debug release benchmark datagen datagen-run datagen-clean benchmark-test benchmark-clean

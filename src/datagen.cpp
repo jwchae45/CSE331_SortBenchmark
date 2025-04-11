@@ -13,6 +13,7 @@
 template<class IntType>
 void generate(const std::int64_t& iter,
               const std::string& dist,
+              const std::string& order,
               std::mt19937& engine,
               const std::string& dest,
               bool verbose=false) {
@@ -47,16 +48,14 @@ void generate(const std::int64_t& iter,
 
     Stream<IntType> sorted(dest + ".sorted");
     std::sort(list.begin(), list.end());
-    for (std::int64_t i = 0; i < iter; ++i) {
-        sorted << list[i];
-    }
+    for (auto i : list) sorted << i;
     sorted.flush();
     if (verbose) std::cout << " [Done]\n";
 }
 
 int main(int argc, char** argv) {
     argparse::ArgumentParser args("datagen");
-    args.add_argument("--iter")
+    args.add_argument("--N")
         .required();
     
     args.add_argument("--dist")
@@ -64,11 +63,10 @@ int main(int argc, char** argv) {
         .choices("uniform", "normal") // TODO: exponential, zipfian, randomwalk, fewunique
         .default_value("uniform");
     
-    // args.add_argument("--sorted")
-    //     .choices("random", "almost", "reversed", "partial")
-    //     .default_value("random")
-    //     .implicit_value(true);
-    //
+    args.add_argument("--order")
+        .choices("random", "almost", "reversed", "partial")
+        .default_value("random");
+    
     // almost_sorted => (1) sliding window + random swap
     //                  (2) global random swap (#swap ~ editing distance?)
     //                  (3) locally sorted
@@ -103,16 +101,17 @@ int main(int argc, char** argv) {
         std::exit(1);
     }
 
-    const std::string iter_suffix = args.get<std::string>("--iter");
+    const std::string iter_suffix = args.get<std::string>("--N");
     const std::int64_t iter = parse_suffix(iter_suffix);
     const std::int64_t seed = args.get<std::int64_t>("--seed");
     const std::int16_t bsize = args.get<std::int16_t>("--bsize");
     const std::string dist = args.get<std::string>("--dist");
+    const std::string order = args.get<std::string>("--order");
     const std::filesystem::path path = std::filesystem::absolute(args.get<std::string>("--path"));
     const bool verbose = args.get<bool>("--verbose");
 
     std::mt19937 engine(seed);
-    std::string dest = std::format("int{}_{}_{}", bsize, iter_suffix, dist);
+    std::string dest = std::format("int{}_{}_{}_{}", bsize, iter_suffix, dist, order);
     dest = resolve_duplicated(path, dest);
 
     if (verbose) {
@@ -129,10 +128,10 @@ int main(int argc, char** argv) {
     }
 
     switch (bsize) {
-    case  8: generate<std::uint8_t >(iter, dist, engine, path / dest, verbose); break;
-    case 16: generate<std::uint16_t>(iter, dist, engine, path / dest, verbose); break;
-    case 32: generate<std::uint32_t>(iter, dist, engine, path / dest, verbose); break;
-    case 64: generate<std::uint64_t>(iter, dist, engine, path / dest, verbose); break;
+    case  8: generate<std::uint8_t >(iter, dist, order, engine, path / dest, verbose); break;
+    case 16: generate<std::uint16_t>(iter, dist, order, engine, path / dest, verbose); break;
+    case 32: generate<std::uint32_t>(iter, dist, order, engine, path / dest, verbose); break;
+    case 64: generate<std::uint64_t>(iter, dist, order, engine, path / dest, verbose); break;
     }
 
     return 0;

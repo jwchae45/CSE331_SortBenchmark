@@ -1,8 +1,10 @@
 #ifndef VERBOSE_HPP
 #define VERBOSE_HPP
 
+#include <ctime>
 #include <chrono>
 #include <ratio>
+#include <iomanip>
 #include <string>
 #include <format>
 #include <functional>
@@ -32,5 +34,11 @@ private:
 
 class ProgressBar {
 };
+
+auto timestamp(void) {
+    auto now = std::chrono::system_clock::now();
+    std::time_t t_now = std::chrono::system_clock::to_time_t(now);
+    return std::put_time(std::localtime(&t_now), "%Y-%m-%d %H:%M:%S");
+}
 
 #endif

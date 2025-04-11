@@ -20,11 +20,11 @@ public:
 
     template<class IntType>
     inline bool comp(std::size_t _idx1, std::size_t _idx2)
-    { tr.comp<1>(); return mnt.at<IntType>(_idx1) < mnt.at<IntType>(_idx2); }
+    { tr.comp<1>(); tr.access<2>(); return mnt.at<IntType>(_idx1) < mnt.at<IntType>(_idx2); }
 
     template<class IntType>
     inline bool comp_direct(const IntType& _i1, const IntType& _i2)
-    { tr.comp<1>(); tr.access<2>(); return _i1 < _i2; }
+    { tr.comp<1>(); return _i1 < _i2; }
 
     template<class IntType>
     inline void swap(std::size_t _idx1, std::size_t _idx2) {
@@ -37,8 +37,10 @@ public:
     inline const Trace& trace(void) const
     { return tr; }
 
+    inline bool validate(void) const
+    { return mnt.validate(); }
+
     virtual void run(void) = 0;
-    virtual bool validate(void) = 0;
 
 protected:
     Mount& mnt;

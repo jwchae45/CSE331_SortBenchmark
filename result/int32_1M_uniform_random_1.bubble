@@ -1,0 +1,24 @@
+================ BENCHMARK INFO ================
+        Dataset : int32_1M_uniform_random_1
+ Sorting Method : bubble
+      Iteration : 10
+================================================
+[   0.0000] Started
+[   0.0000] Iteration  1 / 10 => 1249427.577 ms
+[1249.4316] Iteration  2 / 10 => 1247395.045 ms
+[2496.8304] Iteration  3 / 10 => 1246975.448 ms
+[3743.8082] Iteration  4 / 10 => 1248593.491 ms
+[4992.4040] Iteration  5 / 10 => 1248373.764 ms
+[6240.7802] Iteration  6 / 10 => 1246299.491 ms
+[7487.0820] Iteration  7 / 10 => 1246206.163 ms
+[8733.2905] Iteration  8 / 10 => 1247466.032 ms
+[9980.7589] Iteration  9 / 10 => 1248514.505 ms
+[11229.2757] Iteration 10 / 10 => 1247519.294 ms
+[12476.7973] Finished
+=============== BENCHMARK RESULT ===============
+     Input Size (N) : 1048576
+ Total Elapsed Time : 12476770.810 ms
+  Mean Elapsed Time :  1247677.081 ms
+   # Array Accesses : 19241028563750. / iteration
+      # Comparisons :  5497563381760. / iteration
+================================================

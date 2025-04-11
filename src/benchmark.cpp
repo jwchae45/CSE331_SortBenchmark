@@ -34,6 +34,9 @@ int main(int argc, char** argv) {
     args.add_argument("--dataset")
         .required();
     
+    args.add_argument("--result")
+        .default_value("./benchmark_result.csv");
+    
     try { args.parse_args(argc, argv); }
     catch (const std::exception& err) {
         std::cerr << err.what() << std::endl;
@@ -41,10 +44,13 @@ int main(int argc, char** argv) {
         std::exit(1);
     }
 
+    std::ofstream result_csv(args.get<std::string>("--result"), std::ios::app);
     const std::string method = args.get<std::string>("--method");
     const std::string dataset = args.get<std::string>("--dataset");
     const std::int16_t iter = args.get<std::int16_t>("--iteration");
     const bool verbose = args.get<bool>("--verbose");
+
+    if (!result_csv) throw std::runtime_error("Cannot open the file: " + args.get<std::string>("--result"));
 
     if (verbose) std::cout << std::fixed << std::setprecision(3);
 
@@ -102,5 +108,17 @@ int main(int argc, char** argv) {
                   << "      # Comparisons : " << std::setw(m_dur) << mean_comp << ". / iteration\n"
                   << "================================================\n";
     }
+
+    // timestamp,method,N,int_size,distribution,order,iteration,mean_elapsed,#(array accesses),#(comparisons)
+    csv_write_row(result_csv, timestamp(),
+                              method,
+                              mnt.meta.size,
+                              mnt.meta.bsize,
+                              mnt.meta.dist,
+                              mnt.meta.order,
+                              iter,
+                              std::format("{:.3f}", mean_duration),
+                              std::format("{:.0f}.", mean_access),
+                              std::format("{:.0f}.", mean_comp));
     return 0;
 }

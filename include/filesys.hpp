@@ -12,9 +12,9 @@
 #include <cstdint>
 #include <exception>
 
-constexpr std::int64_t STREAM_BLOCK_SIZE = 8192;
+constexpr std::size_t STREAM_BLOCK_SIZE = 8192;
 
-std::int64_t parse_suffix(const std::string&);
+std::size_t parse_suffix(const std::string&);
 std::string resolve_duplicated(const std::filesystem::path&, const std::string&);
 
 template<class T>
@@ -42,16 +42,16 @@ public:
 
 private:
     std::ofstream fout;
-    const std::int64_t max_cnt;
-    std::int64_t cnt = 0;
+    const std::size_t max_cnt;
+    std::size_t cnt = 0;
     std::vector<T> block;
 };
 
 class Metadata {
 public:
     Metadata(const std::string& _file)
-        : sorted(ext_sorted(_file)),
-          filename(ext_filename(_file)),
+        : filename(ext_filename(_file)),
+          sorted(ext_sorted(_file)),
           bsize(ext_bsize(_file)),
           size(ext_size(_file)),
           dist(ext_dist(_file)),
@@ -73,19 +73,19 @@ private:
         return match;
     }
 
-    std::string ext_sorted(const std::string& _file) {
-        return std::regex_replace(filename, std::regex(R"(^(.*)\.unsorted$)"), "$1.sorted");
-    }
-
     std::string ext_filename(const std::string& _file) {
         return match(_file)[0].str();
+    }
+
+    std::string ext_sorted(const std::string& _file) {
+        return std::regex_replace(ext_filename(_file), std::regex(R"(^(.*)\.unsorted$)"), "$1.sorted");
     }
 
     std::int16_t ext_bsize(const std::string& _file) {
         return static_cast<std::int16_t>(std::stoi(match(_file)[1].str()));
     }
 
-    std::int64_t ext_size(const std::string& _file) {
+    std::size_t ext_size(const std::string& _file) {
         return parse_suffix(match(_file)[2].str() + match(_file)[3].str());
     }
 
@@ -105,7 +105,7 @@ public:
     const std::string filename;
     std::ifstream sorted;
     const std::int16_t bsize;
-    const std::int64_t size;
+    const std::size_t size;
     const std::string dist;
     const std::string order;
     const std::int16_t id;
@@ -123,12 +123,12 @@ public:
     }
 
     template<class T>
-    T& at(std::int64_t _index) {
+    T& at(std::size_t _index) {
         return *(reinterpret_cast<T*>(data.data()) + _index);
     }
 
     template<class T>
-    const T& at(std::int64_t _index) const {
+    const T& at(std::size_t _index) const {
         return *(reinterpret_cast<const T*>(data.data()) + _index);
     }
 
@@ -137,9 +137,6 @@ public:
         fin.seekg(0, std::ios::beg);
         fin.read(reinterpret_cast<char*>(data.data()), data.size());
     }
-
-    // inline bool check_hash(void) const
-    // { return meta.sorted_hash == fnv1a(data.data(), data.size()); }
 
     bool validate(void) {
         std::vector<std::uint8_t> sorted(data.size());
@@ -159,14 +156,14 @@ private:
     std::vector<std::uint8_t> data;
 };
 
-std::int64_t parse_suffix(const std::string& str) {
+std::size_t parse_suffix(const std::string& str) {
     std::regex pattern(R"(^(\d+)([KMBT]?)$)");
     std::smatch match;
 
     if (!std::regex_match(str, match, pattern))
         throw std::invalid_argument("Invalid format: " + str);
     
-    std::int64_t number = std::stoll(match[1].str());
+    std::size_t number = std::stoull(match[1].str());
     switch (std::toupper(match[2].str()[0])) {
     case 'T': number <<= 10; [[fallthrough]];
     case 'B': number <<= 10; [[fallthrough]];

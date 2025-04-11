@@ -28,7 +28,7 @@ BenchResult<ClockResolution> benchmark(SortingMethod& sort) {
     auto begin = std::chrono::high_resolution_clock::now();
     sort->run();
     auto duration(std::chrono::high_resolution_clock::now() - begin);
-    if (!sort->validate()) throw std::runtime_error("Sorted data don\'t match with the answer");
+    if (!sort->validate()) throw std::runtime_error("Sorted data do not match with the answer");
     return BenchResult<ClockResolution>(sort->trace(), duration);
 }
 

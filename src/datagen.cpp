@@ -35,6 +35,8 @@ void generate(const std::int64_t& iter,
         generator = [&]() { std::cout << normal_dist(engine) << "\n"; return static_cast<IntType>(std::llround(normal_dist(engine))); }; // loose cast?
     } else { throw std::runtime_error("Unsupported distribution: " + dist); }
     
+    if (order == "random") {}
+
     if (verbose) std::cout << "Generating..."; // TODO: add progress bar
     Stream<IntType> unsorted(dest + ".unsorted");
     std::vector<IntType> list(iter);

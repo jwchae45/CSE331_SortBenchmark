@@ -55,21 +55,23 @@ int main(int argc, char** argv) {
     if (verbose) std::cout << std::fixed << std::setprecision(3);
 
     if (verbose) {
-        std::cout << "================ BENCHMARK INFO ================\n"
-                  << "        Dataset : " << std::filesystem::path(dataset).filename().string() << "\n"
+        std::cout << "================= BENCHMARK INFO =================\n"
+                  << "      Test Data : " << std::filesystem::path(dataset).filename().string() << "\n"
                   << " Sorting Method : " << method  << "\n"
                   << "      Iteration : " << iter << "\n"
-                  << "================================================\n";
+                  << "==================================================\n";
     }
 
     Mount mnt(dataset + ".unsorted");
-    std::unique_ptr<SortBase> sort = [&]() {
-        if (method == "bubble") return std::make_unique<Bubble>(mnt);
+    std::unique_ptr<SortBase> sort = [&]() -> std::unique_ptr<SortBase> {
+        if (method == "bubble")    return std::make_unique<Bubble>(mnt);
+        if (method == "selection") return std::make_unique<Selection>(mnt);
+        if (method == "insertion") return std::make_unique<Insertion>(mnt);
         throw std::runtime_error("Unsupported sorting metod: " + method);
     }();
 
     TimeLapse<std::ratio<1>> lapse([](double dur) {
-        return std::format("[{:>9.4f}] ", dur);
+        return std::format("[{:>9.3f}] ", dur);
     });
     if (verbose) lapse.start();
     if (verbose) std::cout << lapse() << "Started\n";
@@ -99,14 +101,14 @@ int main(int argc, char** argv) {
     if (verbose) {
         int w_dur = check_width(total_duration, 3);
         int m_dur = check_width(std::max({mean_access, mean_comp}), 0);
-        std::cout << "=============== BENCHMARK RESULT ===============\n"
+        std::cout << "================ BENCHMARK RESULT ================\n"
                   << "     Input Size (N) : " << mnt.meta.size << "\n"
                   << " Total Elapsed Time : " << total_duration << " ms\n"
                   << "  Mean Elapsed Time : " << std::setw(w_dur) << mean_duration << " ms\n"
                   << std::setprecision(0)
                   << "   # Array Accesses : " << std::setw(m_dur) << mean_access << ". / iteration\n"
                   << "      # Comparisons : " << std::setw(m_dur) << mean_comp << ". / iteration\n"
-                  << "================================================\n";
+                  << "==================================================\n";
     }
 
     // timestamp,method,N,int_size,distribution,order,iteration,mean_elapsed,#(array accesses),#(comparisons)

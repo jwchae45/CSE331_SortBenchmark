@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_256K_uniform_random_1
+ Sorting Method : selection
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 30575.604 ms
+[   30.577] Iteration  2 / 10 => 30598.646 ms
+[   61.176] Iteration  3 / 10 => 30527.002 ms
+[   91.704] Iteration  4 / 10 => 30532.095 ms
+[  122.237] Iteration  5 / 10 => 30524.794 ms
+[  152.762] Iteration  6 / 10 => 30538.273 ms
+[  183.301] Iteration  7 / 10 => 30494.471 ms
+[  213.797] Iteration  8 / 10 => 30544.624 ms
+[  244.342] Iteration  9 / 10 => 30599.885 ms
+[  274.943] Iteration 10 / 10 => 30519.262 ms
+[  305.463] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 262144
+ Total Elapsed Time : 305454.656 ms
+  Mean Elapsed Time :  30545.466 ms
+   # Array Accesses : 343606558720. / iteration
+      # Comparisons : 343596072960. / iteration
+==================================================

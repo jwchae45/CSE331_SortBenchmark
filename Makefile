@@ -92,13 +92,153 @@ benchmark-insertion:
 	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=insertion --verbose > ./result/int32_512K_uniform_random_1.insertion
 	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=insertion --verbose > ./result/int32_1M_uniform_random_1.insertion
 
+benchmark-merge:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=merge --verbose > ./result/int32_1K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=merge --verbose > ./result/int32_2K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=merge --verbose > ./result/int32_4K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=merge --verbose > ./result/int32_8K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=merge --verbose > ./result/int32_16K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=merge --verbose > ./result/int32_32K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=merge --verbose > ./result/int32_64K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=merge --verbose > ./result/int32_128K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=merge --verbose > ./result/int32_256K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=merge --verbose > ./result/int32_512K_uniform_random_1.merge
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=merge --verbose > ./result/int32_1M_uniform_random_1.merge
+
+benchmark-heap:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=heap --verbose > ./result/int32_1K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=heap --verbose > ./result/int32_2K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=heap --verbose > ./result/int32_4K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=heap --verbose > ./result/int32_8K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=heap --verbose > ./result/int32_16K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=heap --verbose > ./result/int32_32K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=heap --verbose > ./result/int32_64K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=heap --verbose > ./result/int32_128K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=heap --verbose > ./result/int32_256K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=heap --verbose > ./result/int32_512K_uniform_random_1.heap
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=heap --verbose > ./result/int32_1M_uniform_random_1.heap
+
+benchmark-quick:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=quick --verbose > ./result/int32_1K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=quick --verbose > ./result/int32_2K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=quick --verbose > ./result/int32_4K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=quick --verbose > ./result/int32_8K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=quick --verbose > ./result/int32_16K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=quick --verbose > ./result/int32_32K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=quick --verbose > ./result/int32_64K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=quick --verbose > ./result/int32_128K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=quick --verbose > ./result/int32_256K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=quick --verbose > ./result/int32_512K_uniform_random_1.quick
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=quick --verbose > ./result/int32_1M_uniform_random_1.quick
+
+benchmark-library:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=library --verbose > ./result/int32_1K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=library --verbose > ./result/int32_2K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=library --verbose > ./result/int32_4K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=library --verbose > ./result/int32_8K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=library --verbose > ./result/int32_16K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=library --verbose > ./result/int32_32K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=library --verbose > ./result/int32_64K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=library --verbose > ./result/int32_128K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=library --verbose > ./result/int32_256K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=library --verbose > ./result/int32_512K_uniform_random_1.library
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=library --verbose > ./result/int32_1M_uniform_random_1.library
+
+benchmark-tim:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=tim --verbose > ./result/int32_1K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=tim --verbose > ./result/int32_2K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=tim --verbose > ./result/int32_4K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=tim --verbose > ./result/int32_8K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=tim --verbose > ./result/int32_16K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=tim --verbose > ./result/int32_32K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=tim --verbose > ./result/int32_64K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=tim --verbose > ./result/int32_128K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=tim --verbose > ./result/int32_256K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=tim --verbose > ./result/int32_512K_uniform_random_1.tim
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=tim --verbose > ./result/int32_1M_uniform_random_1.tim
+
+benchmark-cocktail:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=cocktail --verbose > ./result/int32_1K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=cocktail --verbose > ./result/int32_2K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=cocktail --verbose > ./result/int32_4K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=cocktail --verbose > ./result/int32_8K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=cocktail --verbose > ./result/int32_16K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=cocktail --verbose > ./result/int32_32K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=cocktail --verbose > ./result/int32_64K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=cocktail --verbose > ./result/int32_128K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=cocktail --verbose > ./result/int32_256K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=cocktail --verbose > ./result/int32_512K_uniform_random_1.cocktail
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=cocktail --verbose > ./result/int32_1M_uniform_random_1.cocktail
+
+benchmark-shaker:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=shaker --verbose > ./result/int32_1K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=shaker --verbose > ./result/int32_2K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=shaker --verbose > ./result/int32_4K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=shaker --verbose > ./result/int32_8K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=shaker --verbose > ./result/int32_16K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=shaker --verbose > ./result/int32_32K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=shaker --verbose > ./result/int32_64K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=shaker --verbose > ./result/int32_128K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=shaker --verbose > ./result/int32_256K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=shaker --verbose > ./result/int32_512K_uniform_random_1.shaker
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=shaker --verbose > ./result/int32_1M_uniform_random_1.shaker
+
+benchmark-comb:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=comb --verbose > ./result/int32_1K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=comb --verbose > ./result/int32_2K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=comb --verbose > ./result/int32_4K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=comb --verbose > ./result/int32_8K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=comb --verbose > ./result/int32_16K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=comb --verbose > ./result/int32_32K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=comb --verbose > ./result/int32_64K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=comb --verbose > ./result/int32_128K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=comb --verbose > ./result/int32_256K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=comb --verbose > ./result/int32_512K_uniform_random_1.comb
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=comb --verbose > ./result/int32_1M_uniform_random_1.comb
+
+benchmark-tournament:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=tournament --verbose > ./result/int32_1K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=tournament --verbose > ./result/int32_2K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=tournament --verbose > ./result/int32_4K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=tournament --verbose > ./result/int32_8K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=tournament --verbose > ./result/int32_16K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=tournament --verbose > ./result/int32_32K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=tournament --verbose > ./result/int32_64K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=tournament --verbose > ./result/int32_128K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=tournament --verbose > ./result/int32_256K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=tournament --verbose > ./result/int32_512K_uniform_random_1.tournament
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=tournament --verbose > ./result/int32_1M_uniform_random_1.tournament
+
+benchmark-introsort:
+	./benchmark --iteration=10 --dataset=./dataset/int32_1K_uniform_random_1   --method=introsort --verbose > ./result/int32_1K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_2K_uniform_random_1   --method=introsort --verbose > ./result/int32_2K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_4K_uniform_random_1   --method=introsort --verbose > ./result/int32_4K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_8K_uniform_random_1   --method=introsort --verbose > ./result/int32_8K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_16K_uniform_random_1  --method=introsort --verbose > ./result/int32_16K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_32K_uniform_random_1  --method=introsort --verbose > ./result/int32_32K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_64K_uniform_random_1  --method=introsort --verbose > ./result/int32_64K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_128K_uniform_random_1 --method=introsort --verbose > ./result/int32_128K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_256K_uniform_random_1 --method=introsort --verbose > ./result/int32_256K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_512K_uniform_random_1 --method=introsort --verbose > ./result/int32_512K_uniform_random_1.introsort
+	./benchmark --iteration=10 --dataset=./dataset/int32_1M_uniform_random_1   --method=introsort --verbose > ./result/int32_1M_uniform_random_1.introsort
+
 benchmark-run:
 	$(MAKE) benchmark-bubble
 	$(MAKE) benchmark-selection
 	$(MAKE) benchmark-insertion
+	$(MAKE) benchmark-merge
+	$(MAKE) benchmark-heap
+	$(MAKE) benchmark-quick
+	$(MAKE) benchmark-library
+	$(MAKE) benchmark-tim
+	$(MAKE) benchmark-cocktail
+	$(MAKE) benchmark-shaker
+	$(MAKE) benchmark-comb
+	$(MAKE) benchmark-tournament
+	$(MAKE) benchmark-introsort
 
 benchmark-clean:
 	rm -rf ./result/*
 	echo "timestamp,sorting method,N,data bits,distribution,order,iteration,mean elapsed time (ms),#(array accesses) / iteration,#(comparisons) / iteration" > benchmark_result.csv
 
-.PHONY: all clean debug release benchmark datagen datagen-clean datagen-run benchmark-clean benchmark-run benchmark-bubble benchmark-selection benchmark-insertion
+.PHONY: all clean debug release benchmark datagen datagen-clean datagen-run benchmark-clean benchmark-run benchmark-bubble benchmark-selection benchmark-insertion benchmark-merge benchmark-heap benchmark-quick benchmark-library benchmark-tim benchmark-cocktail benchmark-shaker benchmark-comb benchmark-tournament benchmark-introsort

@@ -55,7 +55,7 @@ public:
           bsize(ext_bsize(_file)),
           size(ext_size(_file)),
           dist(ext_dist(_file)),
-          order(ext_order(_file)),
+          pattern(ext_pattern(_file)),
           id(ext_id(_file))
     { if (!sorted) throw std::runtime_error("Cannot open sorted file" + ext_sorted(_file)); }
 
@@ -93,7 +93,7 @@ private:
         return match(_file)[4].str();
     }
 
-    std::string ext_order(const std::string& _file) {
+    std::string ext_pattern(const std::string& _file) {
         return match(_file)[5].str();
     }
 
@@ -107,7 +107,7 @@ public:
     const std::int16_t bsize;
     const std::size_t size;
     const std::string dist;
-    const std::string order;
+    const std::string pattern;
     const std::int16_t id;
 };
 
@@ -123,27 +123,35 @@ public:
     }
 
     template<class T>
-    T& at(std::size_t _index) {
-        return *(reinterpret_cast<T*>(data.data()) + _index);
-    }
+    T& at(std::size_t _index)
+    { return *(reinterpret_cast<T*>(data.data()) + _index); }
 
     template<class T>
-    const T& at(std::size_t _index) const {
-        return *(reinterpret_cast<const T*>(data.data()) + _index);
-    }
+    const T& at(std::size_t _index) const
+    { return *(reinterpret_cast<const T*>(data.data()) + _index); }
+
+    template<class T>
+    std::size_t size(void) const
+    { return data.size() / sizeof(T); }
+
+    inline void reserve(std::size_t _additional)
+    { data.resize(data.size() + _additional); }
 
     void reset(void) {
+        data.resize(meta.size * meta.bsize / 8);
         fin.clear();
         fin.seekg(0, std::ios::beg);
         fin.read(reinterpret_cast<char*>(data.data()), data.size());
     }
 
     bool validate(void) {
-        std::vector<std::uint8_t> sorted(data.size());
+        std::vector<std::uint8_t> sorted(meta.size * meta.bsize / 8);
         meta.sorted.clear();
         meta.sorted.seekg(0, std::ios::beg);
-        meta.sorted.read(reinterpret_cast<char*>(sorted.data()), data.size());
-        for (size_t i = 0; i < data.size(); ++i)
+        meta.sorted.read(reinterpret_cast<char*>(sorted.data()), sorted.size());
+        // for (size_t j = 0; j < meta.size; ++j)
+        //     std::cout << reinterpret_cast<std::uint32_t*>(data.data())[j] << std::endl;
+        for (size_t i = 0; i < sorted.size(); ++i)
             if (sorted[i] != data[i]) return false;
         return true;
     }

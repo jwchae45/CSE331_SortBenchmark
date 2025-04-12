@@ -67,6 +67,7 @@ int main(int argc, char** argv) {
         if (method == "bubble")    return std::make_unique<Bubble>(mnt);
         if (method == "selection") return std::make_unique<Selection>(mnt);
         if (method == "insertion") return std::make_unique<Insertion>(mnt);
+        if (method == "merge")     return std::make_unique<Merge>(mnt);
         throw std::runtime_error("Unsupported sorting metod: " + method);
     }();
 
@@ -111,13 +112,13 @@ int main(int argc, char** argv) {
                   << "==================================================\n";
     }
 
-    // timestamp,method,N,int_size,distribution,order,iteration,mean_elapsed,#(array accesses),#(comparisons)
+    // timestamp,method,N,int_size,distribution,pattern,iteration,mean_elapsed,#(array accesses),#(comparisons)
     csv_write_row(result_csv, timestamp(),
                               method,
                               mnt.meta.size,
                               mnt.meta.bsize,
                               mnt.meta.dist,
-                              mnt.meta.order,
+                              mnt.meta.pattern,
                               iter,
                               std::format("{:.3f}", mean_duration),
                               std::format("{:.0f}.", mean_access),

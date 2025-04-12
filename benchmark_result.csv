@@ -1,4 +1,4 @@
-timestamp,sorting method,N,data bits,distribution,order,iteration,mean elapsed time (ms),#(array accesses) / iteration,#(comparisons) / iteration
+timestamp,sorting method,N,data bits,distribution,pattern,iteration,mean elapsed time (ms),#(array accesses) / iteration,#(comparisons) / iteration
 2025-04-12 05:03:29,selection,1024,32,uniform,random,10,0.529,5278720.,5237760.
 2025-04-12 05:03:29,selection,2048,32,uniform,random,10,2.029,21043200.,20961280.
 2025-04-12 05:03:29,selection,4096,32,uniform,random,10,7.810,84029440.,83865600.
@@ -31,3 +31,4 @@ timestamp,sorting method,N,data bits,distribution,order,iteration,mean elapsed t
 2025-04-12 11:14:07,bubble,131072,32,uniform,random,10,34479.729,300563811410.,85898458360.
 2025-04-12 11:37:10,bubble,262144,32,uniform,random,10,138240.270,1203081214240.,343595503430.
 2025-04-12 13:09:13,bubble,524288,32,uniform,random,10,552362.177,4812805176090.,1374386393250.
+2025-04-12 21:17:54,bubble,1048576,32,uniform,random,10,2211913.687,19243073262790.,5497543311800.

@@ -1,0 +1,114 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_bimodal_almost_1
+ Sorting Method : merge
+      Iteration : 100
+==================================================
+[    0.000] Started
+[    0.000] Iteration   1 / 100 => 19.033 ms
+[    0.023] Iteration   2 / 100 => 15.208 ms
+[    0.041] Iteration   3 / 100 => 15.051 ms
+[    0.059] Iteration   4 / 100 => 14.981 ms
+[    0.077] Iteration   5 / 100 => 15.674 ms
+[    0.096] Iteration   6 / 100 => 14.954 ms
+[    0.113] Iteration   7 / 100 => 14.945 ms
+[    0.131] Iteration   8 / 100 => 15.459 ms
+[    0.150] Iteration   9 / 100 => 14.954 ms
+[    0.167] Iteration  10 / 100 => 15.037 ms
+[    0.185] Iteration  11 / 100 => 14.936 ms
+[    0.203] Iteration  12 / 100 => 14.986 ms
+[    0.221] Iteration  13 / 100 => 14.952 ms
+[    0.239] Iteration  14 / 100 => 14.931 ms
+[    0.257] Iteration  15 / 100 => 14.924 ms
+[    0.274] Iteration  16 / 100 => 14.940 ms
+[    0.292] Iteration  17 / 100 => 14.946 ms
+[    0.310] Iteration  18 / 100 => 14.941 ms
+[    0.328] Iteration  19 / 100 => 15.062 ms
+[    0.346] Iteration  20 / 100 => 14.948 ms
+[    0.363] Iteration  21 / 100 => 14.933 ms
+[    0.381] Iteration  22 / 100 => 14.943 ms
+[    0.399] Iteration  23 / 100 => 14.945 ms
+[    0.417] Iteration  24 / 100 => 14.936 ms
+[    0.435] Iteration  25 / 100 => 14.926 ms
+[    0.452] Iteration  26 / 100 => 14.929 ms
+[    0.470] Iteration  27 / 100 => 14.941 ms
+[    0.488] Iteration  28 / 100 => 14.951 ms
+[    0.506] Iteration  29 / 100 => 14.931 ms
+[    0.524] Iteration  30 / 100 => 14.924 ms
+[    0.541] Iteration  31 / 100 => 14.940 ms
+[    0.559] Iteration  32 / 100 => 14.935 ms
+[    0.577] Iteration  33 / 100 => 14.993 ms
+[    0.595] Iteration  34 / 100 => 15.248 ms
+[    0.613] Iteration  35 / 100 => 15.112 ms
+[    0.631] Iteration  36 / 100 => 14.971 ms
+[    0.649] Iteration  37 / 100 => 14.950 ms
+[    0.667] Iteration  38 / 100 => 15.082 ms
+[    0.685] Iteration  39 / 100 => 14.946 ms
+[    0.703] Iteration  40 / 100 => 14.940 ms
+[    0.720] Iteration  41 / 100 => 14.946 ms
+[    0.738] Iteration  42 / 100 => 14.957 ms
+[    0.756] Iteration  43 / 100 => 14.954 ms
+[    0.774] Iteration  44 / 100 => 14.947 ms
+[    0.792] Iteration  45 / 100 => 14.946 ms
+[    0.809] Iteration  46 / 100 => 14.945 ms
+[    0.827] Iteration  47 / 100 => 14.941 ms
+[    0.845] Iteration  48 / 100 => 15.041 ms
+[    0.863] Iteration  49 / 100 => 14.951 ms
+[    0.881] Iteration  50 / 100 => 14.935 ms
+[    0.898] Iteration  51 / 100 => 14.946 ms
+[    0.916] Iteration  52 / 100 => 15.087 ms
+[    0.934] Iteration  53 / 100 => 14.958 ms
+[    0.952] Iteration  54 / 100 => 14.925 ms
+[    0.970] Iteration  55 / 100 => 14.966 ms
+[    0.988] Iteration  56 / 100 => 16.031 ms
+[    1.007] Iteration  57 / 100 => 15.842 ms
+[    1.026] Iteration  58 / 100 => 15.039 ms
+[    1.043] Iteration  59 / 100 => 14.947 ms
+[    1.061] Iteration  60 / 100 => 14.950 ms
+[    1.079] Iteration  61 / 100 => 15.587 ms
+[    1.098] Iteration  62 / 100 => 16.455 ms
+[    1.117] Iteration  63 / 100 => 15.390 ms
+[    1.135] Iteration  64 / 100 => 14.997 ms
+[    1.153] Iteration  65 / 100 => 15.277 ms
+[    1.172] Iteration  66 / 100 => 15.519 ms
+[    1.190] Iteration  67 / 100 => 15.359 ms
+[    1.208] Iteration  68 / 100 => 15.560 ms
+[    1.227] Iteration  69 / 100 => 15.588 ms
+[    1.246] Iteration  70 / 100 => 15.628 ms
+[    1.264] Iteration  71 / 100 => 15.273 ms
+[    1.282] Iteration  72 / 100 => 15.323 ms
+[    1.300] Iteration  73 / 100 => 15.264 ms
+[    1.319] Iteration  74 / 100 => 15.297 ms
+[    1.337] Iteration  75 / 100 => 15.233 ms
+[    1.355] Iteration  76 / 100 => 14.957 ms
+[    1.373] Iteration  77 / 100 => 14.940 ms
+[    1.391] Iteration  78 / 100 => 14.943 ms
+[    1.408] Iteration  79 / 100 => 14.933 ms
+[    1.426] Iteration  80 / 100 => 14.985 ms
+[    1.444] Iteration  81 / 100 => 14.936 ms
+[    1.462] Iteration  82 / 100 => 14.938 ms
+[    1.480] Iteration  83 / 100 => 14.978 ms
+[    1.497] Iteration  84 / 100 => 14.946 ms
+[    1.515] Iteration  85 / 100 => 15.208 ms
+[    1.533] Iteration  86 / 100 => 14.960 ms
+[    1.551] Iteration  87 / 100 => 14.975 ms
+[    1.569] Iteration  88 / 100 => 14.937 ms
+[    1.587] Iteration  89 / 100 => 14.935 ms
+[    1.605] Iteration  90 / 100 => 14.922 ms
+[    1.622] Iteration  91 / 100 => 15.038 ms
+[    1.640] Iteration  92 / 100 => 14.997 ms
+[    1.658] Iteration  93 / 100 => 15.057 ms
+[    1.676] Iteration  94 / 100 => 15.066 ms
+[    1.694] Iteration  95 / 100 => 15.172 ms
+[    1.712] Iteration  96 / 100 => 15.046 ms
+[    1.730] Iteration  97 / 100 => 15.106 ms
+[    1.748] Iteration  98 / 100 => 14.983 ms
+[    1.766] Iteration  99 / 100 => 14.951 ms
+[    1.784] Iteration 100 / 100 => 14.950 ms
+[    1.801] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 1512.203 ms
+  Mean Elapsed Time :   15.122 ms
+   # Array Accesses : 7547491000. / iteration
+      # Comparisons : 2515454300. / iteration
+==================================================

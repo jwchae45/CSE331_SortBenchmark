@@ -97,12 +97,12 @@ void generate(const std::size_t& iter,
     Stream<IntType> unsorted(dest + ".unsorted");
     std::vector<IntType> list(iter);
     for (std::size_t i = 0; i < iter; ++i) list[i] = distgen();
+    if (!randomly_generated) std::shuffle(list.begin(), list.end(), engine);
     if (verbose) std::cout << " [Done]\n";
 
     if (verbose) std::cout << "Fitting in " << pattern << " pattern...";
-    // "random", "almost", "noise", "reversed", "sawtooth", "bitonic", "frontsorted", "gap"
-    if (pattern == "random" && !randomly_generated) {
-        std::shuffle(list.begin(), list.end(), engine);
+    if (pattern == "random") {
+        // pass
     } else if (pattern == "almost") {
         std::sort(list.begin(), list.end());
         std::size_t n_swap = static_cast<std::size_t>(std::sqrt(list.size())); // N=1K => #swaps=32 | N=1M => #swaps=1K

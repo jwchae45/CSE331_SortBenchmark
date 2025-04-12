@@ -54,12 +54,15 @@ void generate(const std::size_t& iter,
     bool randomly_generated = true;
 
     if (dist == "uniform") {
-        std::uniform_int_distribution<IntType> uniform_dist(std::numeric_limits<IntType>::min(), std::numeric_limits<IntType>::max());
+        // debug log: uniform_dist is a local instance, lambda captures dangling reference of uniform_dist, resulting to UB
+        // (1) static std::uniform_int_distribution<IntType> uniform_dist <= ***given that generate() is called only once!***
+        // (2) [uniform_dist, &engine] <= explicit capture
+        static std::uniform_int_distribution<IntType> uniform_dist(std::numeric_limits<IntType>::min(), std::numeric_limits<IntType>::max());
         distgen = [&]() -> IntType { return uniform_dist(engine); };
     } else if (dist == "normal") {
         double mu = (std::numeric_limits<IntType>::max() + std::numeric_limits<IntType>::min()) / 2.;
         double sd = ((std::numeric_limits<IntType>::max() >> 1) / 4.) - ((std::numeric_limits<IntType>::min() >> 1) / 4.); // 4sigma ~ 99.994%
-        std::normal_distribution<double> normal_dist(mu, sd);
+        static std::normal_distribution<double> normal_dist(mu, sd);
         distgen = [&]() {
             double x;
             double dmin = static_cast<double>(std::numeric_limits<IntType>::min());
@@ -73,10 +76,10 @@ void generate(const std::size_t& iter,
     } else if (dist == "bimodal") {
         double mu = (std::numeric_limits<IntType>::max() + std::numeric_limits<IntType>::min()) / 2.;
         double sd = ((std::numeric_limits<IntType>::max() >> 2) / 4.) - ((std::numeric_limits<IntType>::min() >> 2) / 4.); // extra shifting (half domain)
-        double mu1 = mu * (1. / 4);
-        double mu2 = mu * (3. / 4);
-        std::normal_distribution<double> normal_dist1(mu1, sd);
-        std::normal_distribution<double> normal_dist2(mu2, sd);
+        double mu1 = mu * (1. / 2);
+        double mu2 = mu * (3. / 2);
+        static std::normal_distribution<double> normal_dist1(mu1, sd);
+        static std::normal_distribution<double> normal_dist2(mu2, sd);
         distgen = [&]() {
             double x;
             double dmin = static_cast<double>(std::numeric_limits<IntType>::min());
@@ -120,8 +123,25 @@ void generate(const std::size_t& iter,
         });
     } else if (pattern == "sawtooth") {
         std::sort(list.begin(), list.end());
-        std::size_t partition_depth = static_cast<std::size_t>(std::log2(list.size() + 1) / 2); // N=1K => depth=5 | N=1M => depth=10
+        std::size_t partition_depth = static_cast<std::size_t>(std::log2(list.size() + 1) / 3); // N=1K => depth=3 | N=1M => depth=6
         reverse_merge(engine, list, partition_depth);
+    } else if (pattern == "bitonic") {
+        std::size_t steps = 1 << static_cast<std::size_t>(std::log2(list.size() + 1) / 1.5); // N=1K => steps=64     | N=1M => steps=8192
+        bool ascending = true;                                                               //      => partition=16 |      => partition=128
+        for (std::size_t i = 0; i < list.size(); i += steps) {
+            std::sort(list.begin() + i, list.begin() + i + steps,
+                ascending ? [](IntType _a, IntType _b) { return _a <= _b; }
+                          : [](IntType _a, IntType _b) { return _a >= _b; }
+            );
+            ascending = !ascending;
+        }
+    } else if (pattern == "frontsorted") {
+        std::sort(list.begin(), list.begin() + list.size() / 2);
+    } else if (pattern == "gap") {
+        std::sort(list.begin(), list.end());
+        std::shuffle(list.begin(), list.begin() + list.size() / 2, engine);
+        std::shuffle(list.begin() + list.size() / 2, list.end(), engine);
+        for (std::size_t i = 0, j = list.size() / 2; j < list.size(); i += 2, j += 2) std::swap(list[i], list[j]);
     }
     if (verbose) std::cout << " [Done]\n";
 
@@ -200,7 +220,7 @@ int main(int argc, char** argv) {
 
     if (verbose) {
         std::cout << std::fixed << std::setprecision(4);
-        std::cout << "================ SUMMARY ================\n"
+        std::cout << "======================= SUMMARY =======================\n"
                   << "  Random Seed : " << seed << "\n"
                   << " Distribution : " << dist << "\n"
                   << "   Iterations : " << iter << "\n"
@@ -208,7 +228,7 @@ int main(int argc, char** argv) {
                   << "    Data Size : " << bsize / 8 << " Bytes\n"
                   << "  Target Size : " << iter * bsize / 8388608. << " MiB\n"
                   << "       Target : " << dest << ".*\n"
-                  << "=========================================\n";
+                  << "=======================================================\n";
     }
 
     switch (bsize) {

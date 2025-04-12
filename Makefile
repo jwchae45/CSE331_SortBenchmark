@@ -50,6 +50,29 @@ datagen-run:
 	./datagen --seed=23138609 --bsize=32 --dist=uniform --N=512K
 	./datagen --seed=23138610 --bsize=32 --dist=uniform --N=1M
 
+datagen-patterns:
+	./datagen --seed=23138699 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=uniform --pattern=almost
+	./datagen --seed=23138698 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=uniform --pattern=noise
+	./datagen --seed=23138697 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=uniform --pattern=reversed
+	./datagen --seed=23138696 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=uniform --pattern=sawtooth
+	./datagen --seed=23138695 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=uniform --pattern=bitonic
+	./datagen --seed=23138694 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=uniform --pattern=frontsorted
+	./datagen --seed=23138693 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=uniform --pattern=gap
+	./datagen --seed=23138692 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=normal  --pattern=almost
+	./datagen --seed=23138691 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=normal  --pattern=noise
+	./datagen --seed=23138690 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=normal  --pattern=reversed
+	./datagen --seed=23138689 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=normal  --pattern=sawtooth
+	./datagen --seed=23138688 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=normal  --pattern=bitonic
+	./datagen --seed=23138687 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=normal  --pattern=frontsorted
+	./datagen --seed=23138686 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=normal  --pattern=gap
+	./datagen --seed=23138685 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=bimodal --pattern=almost
+	./datagen --seed=23138684 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=bimodal --pattern=noise
+	./datagen --seed=23138683 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=bimodal --pattern=reversed
+	./datagen --seed=23138682 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=bimodal --pattern=sawtooth
+	./datagen --seed=23138681 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=bimodal --pattern=bitonic
+	./datagen --seed=23138680 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=bimodal --pattern=frontsorted
+	./datagen --seed=23138679 --bsize=32 --N=1M --path=./dataset_1M_dist_patterns/ --dist=bimodal --pattern=gap
+
 datagen-clean:
 	rm -rf ./dataset/*
 

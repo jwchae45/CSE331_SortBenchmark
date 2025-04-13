@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_almost_1
+ Sorting Method : quick_mid
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 427.593 ms
+[    0.448] Iteration  2 / 10 => 421.466 ms
+[    0.890] Iteration  3 / 10 => 427.402 ms
+[    1.336] Iteration  4 / 10 => 425.238 ms
+[    1.780] Iteration  5 / 10 => 424.634 ms
+[    2.223] Iteration  6 / 10 => 425.063 ms
+[    2.667] Iteration  7 / 10 => 424.724 ms
+[    3.111] Iteration  8 / 10 => 424.776 ms
+[    3.554] Iteration  9 / 10 => 419.883 ms
+[    3.993] Iteration 10 / 10 => 418.080 ms
+[    4.429] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 4238.859 ms
+  Mean Elapsed Time :  423.886 ms
+   # Array Accesses : 251875390. / iteration
+      # Comparisons : 251717970. / iteration
+==================================================

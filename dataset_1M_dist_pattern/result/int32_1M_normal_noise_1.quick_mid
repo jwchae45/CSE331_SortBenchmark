@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_normal_noise_1
+ Sorting Method : quick_mid
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 506.668 ms
+[    0.527] Iteration  2 / 10 => 504.841 ms
+[    1.052] Iteration  3 / 10 => 504.583 ms
+[    1.575] Iteration  4 / 10 => 505.191 ms
+[    2.099] Iteration  5 / 10 => 504.565 ms
+[    2.622] Iteration  6 / 10 => 504.565 ms
+[    3.145] Iteration  7 / 10 => 502.212 ms
+[    3.666] Iteration  8 / 10 => 504.518 ms
+[    4.189] Iteration  9 / 10 => 504.833 ms
+[    4.713] Iteration 10 / 10 => 504.400 ms
+[    5.236] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 5046.375 ms
+  Mean Elapsed Time :  504.638 ms
+   # Array Accesses : 312243920. / iteration
+      # Comparisons : 275873500. / iteration
+==================================================

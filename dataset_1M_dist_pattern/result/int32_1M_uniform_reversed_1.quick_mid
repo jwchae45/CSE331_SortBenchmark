@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_reversed_1
+ Sorting Method : quick_mid
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 441.254 ms
+[    0.462] Iteration  2 / 10 => 434.733 ms
+[    0.916] Iteration  3 / 10 => 435.668 ms
+[    1.371] Iteration  4 / 10 => 433.969 ms
+[    1.823] Iteration  5 / 10 => 433.509 ms
+[    2.275] Iteration  6 / 10 => 433.756 ms
+[    2.728] Iteration  7 / 10 => 433.456 ms
+[    3.180] Iteration  8 / 10 => 430.883 ms
+[    3.629] Iteration  9 / 10 => 425.369 ms
+[    4.073] Iteration 10 / 10 => 433.639 ms
+[    4.525] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 4336.236 ms
+  Mean Elapsed Time :  433.624 ms
+   # Array Accesses : 267392490. / iteration
+      # Comparisons : 251660640. / iteration
+==================================================

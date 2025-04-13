@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     argparse::ArgumentParser args("benchmark");
     args.add_argument("--method")
         .required()
-        .choices("merge", "heap", "bubble", "insertion", "selection", "quick", "library", "tim", "cocktail", "shaker", "comb", "tournament", "introsort");
+        .choices("merge", "heap", "bubble", "insertion", "selection", "quick", "quick_mid", "library", "tim", "cocktail", "shaker", "comb", "tournament", "introsort");
     
     args.add_argument("--iteration")
         .scan<'i', std::int16_t>()
@@ -70,6 +70,7 @@ int main(int argc, char** argv) {
         if (method == "merge")     return std::make_unique<Merge>(mnt);
         if (method == "heap")      return std::make_unique<Heap>(mnt);
         if (method == "quick")     return std::make_unique<Quick>(mnt);
+        if (method == "quick_mid") return std::make_unique<QuickMid>(mnt);
         throw std::runtime_error("Unsupported sorting metod: " + method);
     }();
 

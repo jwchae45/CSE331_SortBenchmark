@@ -282,4 +282,48 @@ public:
     }
 };
 
+class QuickMid : public SortBase { // Pivot = mid of {A[M], A[(M+N)/2], A[N]}
+public:
+    QuickMid(Mount& _mnt) : SortBase(_mnt) {}
+
+    template<class IntType>
+    IntType Mid(const IntType& a, const IntType& b, const IntType& c) {
+        if ((lte_direct<IntType>(b, a) && lte_direct<IntType>(a, c)) || (lte_direct<IntType>(c, a) && lte_direct<IntType>(a, b))) return a;
+        if ((lte_direct<IntType>(a, b) && lte_direct<IntType>(b, c)) || (lte_direct<IntType>(c, b) && lte_direct<IntType>(b, a))) return b;
+        return c;
+    }
+
+    template<class IntType>
+    void QuickSort(std::size_t M, std::size_t N) { // [M, N)
+        if (M >= N - 1) return;
+        // Partition(A, M, N, I, J)
+        IntType pivot = Mid(at<IntType>(M), at<IntType>((M+N-1)/2), at<IntType>(N - 1));
+        std::size_t I = M - 1;
+        std::size_t J = N;
+        while (true) {
+            do {--J;} while (gt_direct<IntType>(at<IntType>(J), pivot));
+            do {++I;} while (lt_direct<IntType>(at<IntType>(I), pivot));
+            if (I < J) swap<IntType>(I, J);
+            else break;
+        }
+        
+        QuickSort<IntType>(M, J+1);
+        QuickSort<IntType>(J+1, N);
+    }
+
+    template<class IntType>
+    void run_(void) {
+        QuickSort<IntType>(0, size<IntType>());
+    }
+
+    void run(void) {
+        switch (mnt.meta.bsize) {
+        case 8:  run_<std::uint8_t >(); break;
+        case 16: run_<std::uint16_t>(); break;
+        case 32: run_<std::uint32_t>(); break;
+        case 64: run_<std::uint64_t>(); break;
+        }
+    }
+};
+
 #endif

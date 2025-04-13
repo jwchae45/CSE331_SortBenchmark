@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_normal_sawtooth_1
+ Sorting Method : quick_mid
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 683.381 ms
+[    0.704] Iteration  2 / 10 => 680.844 ms
+[    1.404] Iteration  3 / 10 => 674.894 ms
+[    2.098] Iteration  4 / 10 => 673.298 ms
+[    2.790] Iteration  5 / 10 => 675.068 ms
+[    3.484] Iteration  6 / 10 => 675.596 ms
+[    4.178] Iteration  7 / 10 => 669.923 ms
+[    4.866] Iteration  8 / 10 => 678.082 ms
+[    5.563] Iteration  9 / 10 => 677.000 ms
+[    6.259] Iteration 10 / 10 => 667.891 ms
+[    6.945] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 6755.977 ms
+  Mean Elapsed Time :  675.598 ms
+   # Array Accesses : 482521080. / iteration
+      # Comparisons : 344205770. / iteration
+==================================================

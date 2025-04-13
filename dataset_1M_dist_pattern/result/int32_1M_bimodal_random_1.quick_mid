@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_bimodal_random_1
+ Sorting Method : quick_mid
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 656.990 ms
+[    0.677] Iteration  2 / 10 => 659.662 ms
+[    1.357] Iteration  3 / 10 => 653.220 ms
+[    2.028] Iteration  4 / 10 => 652.561 ms
+[    2.699] Iteration  5 / 10 => 654.081 ms
+[    3.372] Iteration  6 / 10 => 654.556 ms
+[    4.046] Iteration  7 / 10 => 653.813 ms
+[    4.718] Iteration  8 / 10 => 653.545 ms
+[    5.390] Iteration  9 / 10 => 653.342 ms
+[    6.062] Iteration 10 / 10 => 654.186 ms
+[    6.735] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 6545.955 ms
+  Mean Elapsed Time :  654.595 ms
+   # Array Accesses : 450051000. / iteration
+      # Comparisons : 309575460. / iteration
+==================================================

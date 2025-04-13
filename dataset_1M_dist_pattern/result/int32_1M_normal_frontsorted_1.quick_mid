@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_normal_frontsorted_1
+ Sorting Method : quick_mid
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 679.666 ms
+[    0.700] Iteration  2 / 10 => 684.423 ms
+[    1.404] Iteration  3 / 10 => 671.724 ms
+[    2.095] Iteration  4 / 10 => 679.773 ms
+[    2.793] Iteration  5 / 10 => 681.200 ms
+[    3.493] Iteration  6 / 10 => 679.227 ms
+[    4.191] Iteration  7 / 10 => 671.868 ms
+[    4.881] Iteration  8 / 10 => 672.817 ms
+[    5.573] Iteration  9 / 10 => 681.133 ms
+[    6.272] Iteration 10 / 10 => 681.462 ms
+[    6.972] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 6783.294 ms
+  Mean Elapsed Time :  678.329 ms
+   # Array Accesses : 469711240. / iteration
+      # Comparisons : 335464190. / iteration
+==================================================

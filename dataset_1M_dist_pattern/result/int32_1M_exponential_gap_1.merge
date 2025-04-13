@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_gap_1
+ Sorting Method : merge
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 91.986 ms
+[    0.096] Iteration  2 / 10 => 87.904 ms
+[    0.186] Iteration  3 / 10 => 87.133 ms
+[    0.275] Iteration  4 / 10 => 87.194 ms
+[    0.365] Iteration  5 / 10 => 87.291 ms
+[    0.454] Iteration  6 / 10 => 87.224 ms
+[    0.544] Iteration  7 / 10 => 87.182 ms
+[    0.634] Iteration  8 / 10 => 87.556 ms
+[    0.723] Iteration  9 / 10 => 87.047 ms
+[    0.813] Iteration 10 / 10 => 87.369 ms
+[    0.903] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 877.887 ms
+  Mean Elapsed Time :  87.789 ms
+   # Array Accesses : 1245035860. / iteration
+      # Comparisons :  412802730. / iteration
+==================================================

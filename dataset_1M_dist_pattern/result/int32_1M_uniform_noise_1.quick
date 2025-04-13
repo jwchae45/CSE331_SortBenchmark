@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_noise_1
+ Sorting Method : quick
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 42771.322 ms
+[   42.775] Iteration  2 / 10 => 42780.361 ms
+[   85.559] Iteration  3 / 10 => 42698.493 ms
+[  128.260] Iteration  4 / 10 => 42659.828 ms
+[  170.922] Iteration  5 / 10 => 42684.519 ms
+[  213.609] Iteration  6 / 10 => 42755.465 ms
+[  256.367] Iteration  7 / 10 => 42785.847 ms
+[  299.155] Iteration  8 / 10 => 42705.887 ms
+[  341.863] Iteration  9 / 10 => 42682.814 ms
+[  384.548] Iteration 10 / 10 => 42719.054 ms
+[  427.270] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 427243.591 ms
+  Mean Elapsed Time :  42724.359 ms
+   # Array Accesses : 526523613910. / iteration
+      # Comparisons : 526468236490. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_normal_reversed_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 50.900 ms
+[    0.055] Iteration  2 / 10 => 50.644 ms
+[    0.109] Iteration  3 / 10 => 50.688 ms
+[    0.162] Iteration  4 / 10 => 50.331 ms
+[    0.214] Iteration  5 / 10 => 50.026 ms
+[    0.267] Iteration  6 / 10 => 49.996 ms
+[    0.319] Iteration  7 / 10 => 49.977 ms
+[    0.371] Iteration  8 / 10 => 50.027 ms
+[    0.423] Iteration  9 / 10 => 50.193 ms
+[    0.476] Iteration 10 / 10 => 49.990 ms
+[    0.528] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 502.773 ms
+  Mean Elapsed Time :  50.277 ms
+   # Array Accesses : 1011685670. / iteration
+      # Comparisons :  389270690. / iteration
+==================================================

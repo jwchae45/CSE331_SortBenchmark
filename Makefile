@@ -52,14 +52,14 @@ DATASET_1M_DIST_PATTERN_FILES := $(basename $(notdir $(wildcard $(DATASET_1M_DIS
 datagen-n-uniform-random:
 	@mkdir -p $(DATASET_N_UNIFORM_RANDOM)
 	@$(foreach x, $(N), ./datagen --seed=$(RANDOM_SEED) --N=$(x) --path=$(DATASET_N_UNIFORM_RANDOM);)
-	python3 plot.py --path=$(DATASET_N_UNIFORM_RANDOM)
+	@python3 plot.py --path=$(DATASET_N_UNIFORM_RANDOM)
 
 datagen-1m-dist-pattern:
 	@mkdir -p $(DATASET_1M_DIST_PATTERN)
 	@$(foreach dist, $(DISTRIBUTION), \
 		$(foreach pattern, $(PATTERN), \
 			./datagen --seed=$(RANDOM_SEED) --N=1M --path=$(DATASET_1M_DIST_PATTERN) --dist=$(dist) --pattern=$(pattern);))
-	python3 plot.py --path=$(DATASET_1M_DIST_PATTERN)
+	@python3 plot.py --path=$(DATASET_1M_DIST_PATTERN)
 
 benchmark-n-uniform-random:
 	@mkdir -p $(DATASET_N_UNIFORM_RANDOM)/result

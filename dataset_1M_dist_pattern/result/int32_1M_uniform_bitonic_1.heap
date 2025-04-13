@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_bitonic_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 85.693 ms
+[    0.090] Iteration  2 / 10 => 86.901 ms
+[    0.181] Iteration  3 / 10 => 85.161 ms
+[    0.268] Iteration  4 / 10 => 85.194 ms
+[    0.356] Iteration  5 / 10 => 89.045 ms
+[    0.447] Iteration  6 / 10 => 87.726 ms
+[    0.537] Iteration  7 / 10 => 85.467 ms
+[    0.625] Iteration  8 / 10 => 85.211 ms
+[    0.712] Iteration  9 / 10 => 85.331 ms
+[    0.800] Iteration 10 / 10 => 85.261 ms
+[    0.888] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 860.989 ms
+  Mean Elapsed Time :  86.099 ms
+   # Array Accesses : 1068894470. / iteration
+      # Comparisons :  408237620. / iteration
+==================================================

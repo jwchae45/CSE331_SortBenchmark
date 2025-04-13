@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_64K_uniform_random_1
+ Sorting Method : bubble
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 8605.456 ms
+[    8.606] Iteration  2 / 10 => 8610.360 ms
+[   17.216] Iteration  3 / 10 => 8584.246 ms
+[   25.801] Iteration  4 / 10 => 8556.344 ms
+[   34.357] Iteration  5 / 10 => 8587.230 ms
+[   42.945] Iteration  6 / 10 => 8569.278 ms
+[   51.514] Iteration  7 / 10 => 8585.093 ms
+[   60.100] Iteration  8 / 10 => 8537.221 ms
+[   68.637] Iteration  9 / 10 => 8583.598 ms
+[   77.221] Iteration 10 / 10 => 8597.335 ms
+[   85.818] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 65536
+ Total Elapsed Time : 85816.161 ms
+  Mean Elapsed Time :  8581.616 ms
+   # Array Accesses : 75186385440. / iteration
+      # Comparisons : 21474481050. / iteration
+==================================================

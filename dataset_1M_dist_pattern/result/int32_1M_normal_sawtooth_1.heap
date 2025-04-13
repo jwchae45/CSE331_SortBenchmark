@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_normal_sawtooth_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 83.895 ms
+[    0.088] Iteration  2 / 10 => 83.911 ms
+[    0.175] Iteration  3 / 10 => 84.290 ms
+[    0.262] Iteration  4 / 10 => 83.386 ms
+[    0.347] Iteration  5 / 10 => 83.591 ms
+[    0.433] Iteration  6 / 10 => 83.790 ms
+[    0.519] Iteration  7 / 10 => 83.384 ms
+[    0.605] Iteration  8 / 10 => 83.655 ms
+[    0.691] Iteration  9 / 10 => 83.570 ms
+[    0.777] Iteration 10 / 10 => 83.075 ms
+[    0.862] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 836.548 ms
+  Mean Elapsed Time :  83.655 ms
+   # Array Accesses : 1095605760. / iteration
+      # Comparisons :  416869390. / iteration
+==================================================

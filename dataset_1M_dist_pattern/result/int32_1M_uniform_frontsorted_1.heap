@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_frontsorted_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 84.426 ms
+[    0.088] Iteration  2 / 10 => 84.989 ms
+[    0.177] Iteration  3 / 10 => 84.553 ms
+[    0.264] Iteration  4 / 10 => 84.231 ms
+[    0.350] Iteration  5 / 10 => 84.065 ms
+[    0.437] Iteration  6 / 10 => 84.323 ms
+[    0.523] Iteration  7 / 10 => 84.122 ms
+[    0.610] Iteration  8 / 10 => 84.501 ms
+[    0.696] Iteration  9 / 10 => 84.587 ms
+[    0.783] Iteration 10 / 10 => 84.179 ms
+[    0.870] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 843.976 ms
+  Mean Elapsed Time :  84.398 ms
+   # Array Accesses : 1286192690. / iteration
+      # Comparisons :  476469550. / iteration
+==================================================

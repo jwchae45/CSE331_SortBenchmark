@@ -11,7 +11,7 @@ public:
     SortBase(Mount& _mnt) : mnt(_mnt) {}
 
     template<class IntType>
-    inline const IntType& at(std::size_t _idx)
+    inline IntType& at(std::size_t _idx)
     { tr.access<1>(); return mnt.at<IntType>(_idx); }
 
     template<class IntType>
@@ -23,12 +23,40 @@ public:
     { tr.access<1>(); mnt.at<IntType>(_idx) = _val; }
 
     template<class IntType>
-    inline bool comp(std::size_t _idx1, std::size_t _idx2)
+    inline void set_direct(IntType& _val1, const IntType& _val2)
+    { tr.access<1>(); _val1 = _val2; }
+
+    template<class IntType>
+    inline bool lte(std::size_t _idx1, std::size_t _idx2)
     { tr.comp<1>(); tr.access<2>(); return mnt.at<IntType>(_idx1) <= mnt.at<IntType>(_idx2); }
 
     template<class IntType>
-    inline bool comp_direct(const IntType& _i1, const IntType& _i2)
+    inline bool lte_direct(const IntType& _i1, const IntType& _i2)
     { tr.comp<1>(); return _i1 <= _i2; }
+
+    template<class IntType>
+    inline bool lt(std::size_t _idx1, std::size_t _idx2)
+    { tr.comp<1>(); tr.access<2>(); return mnt.at<IntType>(_idx1) < mnt.at<IntType>(_idx2); }
+
+    template<class IntType>
+    inline bool lt_direct(const IntType& _i1, const IntType& _i2)
+    { tr.comp<1>(); return _i1 < _i2; }
+
+    template<class IntType>
+    inline bool gte(std::size_t _idx1, std::size_t _idx2)
+    { tr.comp<1>(); tr.access<2>(); return mnt.at<IntType>(_idx1) >= mnt.at<IntType>(_idx2); }
+
+    template<class IntType>
+    inline bool gte_direct(const IntType& _i1, const IntType& _i2)
+    { tr.comp<1>(); return _i1 >= _i2; }
+
+    template<class IntType>
+    inline bool gt(std::size_t _idx1, std::size_t _idx2)
+    { tr.comp<1>(); tr.access<2>(); return mnt.at<IntType>(_idx1) > mnt.at<IntType>(_idx2); }
+
+    template<class IntType>
+    inline bool gt_direct(const IntType& _i1, const IntType& _i2)
+    { tr.comp<1>(); return _i1 > _i2; }
 
     template<class IntType>
     inline void swap(std::size_t _idx1, std::size_t _idx2) {

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_bimodal_frontsorted_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 85.305 ms
+[    0.089] Iteration  2 / 10 => 85.316 ms
+[    0.178] Iteration  3 / 10 => 84.684 ms
+[    0.265] Iteration  4 / 10 => 85.172 ms
+[    0.352] Iteration  5 / 10 => 85.187 ms
+[    0.440] Iteration  6 / 10 => 84.832 ms
+[    0.527] Iteration  7 / 10 => 84.374 ms
+[    0.614] Iteration  8 / 10 => 85.323 ms
+[    0.701] Iteration  9 / 10 => 84.374 ms
+[    0.788] Iteration 10 / 10 => 84.198 ms
+[    0.874] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 848.766 ms
+  Mean Elapsed Time :  84.877 ms
+   # Array Accesses : 1285106850. / iteration
+      # Comparisons :  476055500. / iteration
+==================================================

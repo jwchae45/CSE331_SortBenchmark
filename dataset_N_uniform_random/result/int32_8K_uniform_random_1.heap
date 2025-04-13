@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_8K_uniform_random_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 0.519 ms
+[    0.001] Iteration  2 / 10 => 0.563 ms
+[    0.001] Iteration  3 / 10 => 0.559 ms
+[    0.002] Iteration  4 / 10 => 0.520 ms
+[    0.002] Iteration  5 / 10 => 0.562 ms
+[    0.003] Iteration  6 / 10 => 0.519 ms
+[    0.003] Iteration  7 / 10 => 0.561 ms
+[    0.004] Iteration  8 / 10 => 0.521 ms
+[    0.005] Iteration  9 / 10 => 0.567 ms
+[    0.005] Iteration 10 / 10 => 0.547 ms
+[    0.006] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 8192
+ Total Elapsed Time : 5.437 ms
+  Mean Elapsed Time : 0.544 ms
+   # Array Accesses : 5329720. / iteration
+      # Comparisons : 1990180. / iteration
+==================================================

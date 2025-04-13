@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_almost_1
+ Sorting Method : merge
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 23.373 ms
+[    0.027] Iteration  2 / 10 => 19.455 ms
+[    0.049] Iteration  3 / 10 => 19.395 ms
+[    0.071] Iteration  4 / 10 => 19.444 ms
+[    0.093] Iteration  5 / 10 => 19.375 ms
+[    0.114] Iteration  6 / 10 => 19.593 ms
+[    0.136] Iteration  7 / 10 => 20.185 ms
+[    0.159] Iteration  8 / 10 => 19.401 ms
+[    0.181] Iteration  9 / 10 => 19.763 ms
+[    0.203] Iteration 10 / 10 => 19.873 ms
+[    0.225] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 199.857 ms
+  Mean Elapsed Time :  19.986 ms
+   # Array Accesses : 754749200. / iteration
+      # Comparisons : 251545480. / iteration
+==================================================

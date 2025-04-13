@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_sawtooth_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 82.888 ms
+[    0.087] Iteration  2 / 10 => 84.155 ms
+[    0.175] Iteration  3 / 10 => 83.433 ms
+[    0.260] Iteration  4 / 10 => 82.975 ms
+[    0.346] Iteration  5 / 10 => 83.053 ms
+[    0.431] Iteration  6 / 10 => 82.905 ms
+[    0.516] Iteration  7 / 10 => 81.797 ms
+[    0.600] Iteration  8 / 10 => 82.701 ms
+[    0.685] Iteration  9 / 10 => 84.188 ms
+[    0.772] Iteration 10 / 10 => 82.938 ms
+[    0.857] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 831.033 ms
+  Mean Elapsed Time :  83.103 ms
+   # Array Accesses : 1095684160. / iteration
+      # Comparisons :  416890200. / iteration
+==================================================

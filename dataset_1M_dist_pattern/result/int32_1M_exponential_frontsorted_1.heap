@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_frontsorted_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 84.867 ms
+[    0.089] Iteration  2 / 10 => 85.571 ms
+[    0.178] Iteration  3 / 10 => 84.389 ms
+[    0.265] Iteration  4 / 10 => 84.152 ms
+[    0.351] Iteration  5 / 10 => 85.015 ms
+[    0.438] Iteration  6 / 10 => 84.467 ms
+[    0.525] Iteration  7 / 10 => 84.116 ms
+[    0.612] Iteration  8 / 10 => 85.076 ms
+[    0.699] Iteration  9 / 10 => 84.149 ms
+[    0.785] Iteration 10 / 10 => 84.120 ms
+[    0.872] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 845.923 ms
+  Mean Elapsed Time :  84.592 ms
+   # Array Accesses : 1307294410. / iteration
+      # Comparisons :  484414320. / iteration
+==================================================

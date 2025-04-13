@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_bimodal_sawtooth_1
+ Sorting Method : quick
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 62.323 ms
+[    0.066] Iteration  2 / 10 => 62.142 ms
+[    0.132] Iteration  3 / 10 => 61.419 ms
+[    0.196] Iteration  4 / 10 => 61.310 ms
+[    0.259] Iteration  5 / 10 => 60.180 ms
+[    0.321] Iteration  6 / 10 => 60.188 ms
+[    0.384] Iteration  7 / 10 => 60.128 ms
+[    0.446] Iteration  8 / 10 => 60.494 ms
+[    0.509] Iteration  9 / 10 => 60.066 ms
+[    0.571] Iteration 10 / 10 => 61.279 ms
+[    0.634] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 609.530 ms
+  Mean Elapsed Time :  60.953 ms
+   # Array Accesses : 586443050. / iteration
+      # Comparisons : 431336210. / iteration
+==================================================

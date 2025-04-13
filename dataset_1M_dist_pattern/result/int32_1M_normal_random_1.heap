@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_normal_random_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 101.251 ms
+[    0.105] Iteration  2 / 10 => 101.495 ms
+[    0.210] Iteration  3 / 10 => 100.519 ms
+[    0.313] Iteration  4 / 10 => 100.652 ms
+[    0.416] Iteration  5 / 10 => 100.492 ms
+[    0.519] Iteration  6 / 10 => 101.048 ms
+[    0.622] Iteration  7 / 10 => 100.921 ms
+[    0.725] Iteration  8 / 10 => 100.466 ms
+[    0.828] Iteration  9 / 10 => 100.536 ms
+[    0.931] Iteration 10 / 10 => 100.800 ms
+[    1.034] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 1008.180 ms
+  Mean Elapsed Time :  100.818 ms
+   # Array Accesses : 1049795880. / iteration
+      # Comparisons :  401719030. / iteration
+==================================================

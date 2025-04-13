@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_16K_uniform_random_1
+ Sorting Method : merge
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1.049 ms
+[    0.001] Iteration  2 / 10 => 0.990 ms
+[    0.002] Iteration  3 / 10 => 0.990 ms
+[    0.003] Iteration  4 / 10 => 0.997 ms
+[    0.004] Iteration  5 / 10 => 1.028 ms
+[    0.005] Iteration  6 / 10 => 0.979 ms
+[    0.006] Iteration  7 / 10 => 0.978 ms
+[    0.007] Iteration  8 / 10 => 0.976 ms
+[    0.008] Iteration  9 / 10 => 0.979 ms
+[    0.009] Iteration 10 / 10 => 0.979 ms
+[    0.010] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 16384
+ Total Elapsed Time : 9.945 ms
+  Mean Elapsed Time : 0.995 ms
+   # Array Accesses : 12860320. / iteration
+      # Comparisons :  4136400. / iteration
+==================================================

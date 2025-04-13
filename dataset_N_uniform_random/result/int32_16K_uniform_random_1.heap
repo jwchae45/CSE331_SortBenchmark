@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_16K_uniform_random_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1.189 ms
+[    0.001] Iteration  2 / 10 => 1.190 ms
+[    0.003] Iteration  3 / 10 => 1.234 ms
+[    0.004] Iteration  4 / 10 => 1.190 ms
+[    0.005] Iteration  5 / 10 => 1.147 ms
+[    0.006] Iteration  6 / 10 => 1.172 ms
+[    0.007] Iteration  7 / 10 => 1.158 ms
+[    0.009] Iteration  8 / 10 => 1.146 ms
+[    0.010] Iteration  9 / 10 => 1.149 ms
+[    0.011] Iteration 10 / 10 => 1.152 ms
+[    0.012] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 16384
+ Total Elapsed Time : 11.726 ms
+  Mean Elapsed Time :  1.173 ms
+   # Array Accesses : 11478200. / iteration
+      # Comparisons :  4308310. / iteration
+==================================================

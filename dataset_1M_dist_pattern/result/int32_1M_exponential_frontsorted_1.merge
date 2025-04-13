@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_frontsorted_1
+ Sorting Method : merge
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 59.566 ms
+[    0.063] Iteration  2 / 10 => 55.560 ms
+[    0.121] Iteration  3 / 10 => 56.394 ms
+[    0.180] Iteration  4 / 10 => 56.542 ms
+[    0.239] Iteration  5 / 10 => 55.574 ms
+[    0.297] Iteration  6 / 10 => 55.452 ms
+[    0.354] Iteration  7 / 10 => 55.505 ms
+[    0.412] Iteration  8 / 10 => 55.658 ms
+[    0.470] Iteration  9 / 10 => 55.520 ms
+[    0.528] Iteration 10 / 10 => 55.227 ms
+[    0.586] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 560.998 ms
+  Mean Elapsed Time :  56.100 ms
+   # Array Accesses : 1117013540. / iteration
+      # Comparisons :  369763090. / iteration
+==================================================

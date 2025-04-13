@@ -68,6 +68,8 @@ int main(int argc, char** argv) {
         if (method == "selection") return std::make_unique<Selection>(mnt);
         if (method == "insertion") return std::make_unique<Insertion>(mnt);
         if (method == "merge")     return std::make_unique<Merge>(mnt);
+        if (method == "heap")      return std::make_unique<Heap>(mnt);
+        if (method == "quick")     return std::make_unique<Quick>(mnt);
         throw std::runtime_error("Unsupported sorting metod: " + method);
     }();
 

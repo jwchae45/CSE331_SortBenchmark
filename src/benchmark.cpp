@@ -71,6 +71,7 @@ int main(int argc, char** argv) {
         if (method == "heap")      return std::make_unique<Heap>(mnt);
         if (method == "quick")     return std::make_unique<Quick>(mnt);
         if (method == "quick_mid") return std::make_unique<QuickMid>(mnt);
+        if (method == "library")   return std::make_unique<Library>(mnt);
         throw std::runtime_error("Unsupported sorting metod: " + method);
     }();
 

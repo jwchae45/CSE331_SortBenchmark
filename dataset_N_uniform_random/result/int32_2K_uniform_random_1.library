@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_2K_uniform_random_1
+ Sorting Method : library
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 0.230 ms
+[    0.000] Iteration  2 / 10 => 0.244 ms
+[    0.001] Iteration  3 / 10 => 0.205 ms
+[    0.001] Iteration  4 / 10 => 0.205 ms
+[    0.001] Iteration  5 / 10 => 0.207 ms
+[    0.001] Iteration  6 / 10 => 0.207 ms
+[    0.001] Iteration  7 / 10 => 0.246 ms
+[    0.002] Iteration  8 / 10 => 0.205 ms
+[    0.002] Iteration  9 / 10 => 0.206 ms
+[    0.002] Iteration 10 / 10 => 0.206 ms
+[    0.002] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 2048
+ Total Elapsed Time : 2.162 ms
+  Mean Elapsed Time : 0.216 ms
+   # Array Accesses : 1267000. / iteration
+      # Comparisons :  289080. / iteration
+==================================================

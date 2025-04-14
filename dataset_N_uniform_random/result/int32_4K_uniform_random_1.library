@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_4K_uniform_random_1
+ Sorting Method : library
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 0.488 ms
+[    0.001] Iteration  2 / 10 => 0.485 ms
+[    0.001] Iteration  3 / 10 => 0.449 ms
+[    0.001] Iteration  4 / 10 => 0.482 ms
+[    0.002] Iteration  5 / 10 => 0.449 ms
+[    0.002] Iteration  6 / 10 => 0.447 ms
+[    0.003] Iteration  7 / 10 => 0.485 ms
+[    0.003] Iteration  8 / 10 => 0.448 ms
+[    0.004] Iteration  9 / 10 => 0.486 ms
+[    0.004] Iteration 10 / 10 => 0.446 ms
+[    0.005] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 4096
+ Total Elapsed Time : 4.666 ms
+  Mean Elapsed Time : 0.467 ms
+   # Array Accesses : 2697550. / iteration
+      # Comparisons :  619050. / iteration
+==================================================

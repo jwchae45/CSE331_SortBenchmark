@@ -73,10 +73,18 @@ public:
     inline const Trace& trace(void) const
     { return tr; }
 
-    inline bool validate(void) const
-    { return mnt.validate(); }
+    inline bool validate(bool verbose = false) const
+    { return mnt.validate(verbose); }
 
     virtual void run(void) = 0;
+
+    template<std::int_fast64_t Diff>
+    inline void manual_access()
+    { tr.access<Diff>(); }
+
+    template<std::int_fast64_t Diff>
+    inline void manual_comp()
+    { tr.comp<Diff>(); }
 
 protected:
     Mount& mnt;

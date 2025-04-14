@@ -144,15 +144,24 @@ public:
         fin.read(reinterpret_cast<char*>(data.data()), data.size());
     }
 
-    bool validate(void) {
+    bool validate(bool verbose = false) {
         std::vector<std::uint8_t> sorted(meta.size * meta.bsize / 8);
         meta.sorted.clear();
         meta.sorted.seekg(0, std::ios::beg);
         meta.sorted.read(reinterpret_cast<char*>(sorted.data()), sorted.size());
-        // for (size_t j = 0; j < meta.size; ++j)
-        //     std::cout << reinterpret_cast<std::uint32_t*>(data.data())[j] << std::endl;
-        for (size_t i = 0; i < sorted.size(); ++i)
-            if (sorted[i] != data[i]) return false;
+        if (verbose) {
+            for (size_t j = 0; j < meta.size; ++j)
+                std::cout << reinterpret_cast<std::uint32_t*>(data.data())[j] << std::endl;
+        }
+        for (size_t i = 0; i < sorted.size(); ++i) {
+            if (sorted[i] != data[i]) {
+                if (verbose) {
+                    std::cout << "Sorted[" << i << "] = " <<   data[i] << "\n";
+                    std::cout << "Answer[" << i << "] = " << sorted[i] << "\n";
+                }
+                return false;
+            }
+        }
         return true;
     }
 

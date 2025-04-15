@@ -38,7 +38,7 @@ release: clean all
 
 RANDOM_SEED := 20231386
 ITERATION := 10
-METHOD := merge heap bubble insertion selection quick library tim cocktail comb tournament introsort
+METHOD := merge heap bubble insertion selection quick quick_mid library tim cocktail comb tournament introsort
 DISTRIBUTION := uniform normal bimodal constant fewunique
 
 N := 1K 2K 4K 8K 16K 32K 64K 128K 256K 512K 1M

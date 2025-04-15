@@ -471,3 +471,6 @@ timestamp,sorting method,N,data bits,distribution,pattern,iteration,mean elapsed
 2025-04-15 12:06:19,introsort,16,32,uniform,random,10000,0.000081,2490000.,570000.
 2025-04-15 12:06:19,introsort,32,32,uniform,random,10000,0.000405,6170000.,1880000.
 2025-04-15 12:06:19,introsort,8,32,uniform,random,10000,0.000051,850000.,200000.
+2025-04-15 13:02:06,quick_mid,16,32,uniform,random,10000,0.152,1740000.,1320000.
+2025-04-15 13:02:06,quick_mid,32,32,uniform,random,10000,0.313,4250000.,3430000.
+2025-04-15 13:02:06,quick_mid,8,32,uniform,random,10000,0.076,800000.,620000.

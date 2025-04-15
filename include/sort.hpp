@@ -369,96 +369,86 @@ public:
     }
 
     template<class IntType>
-    void run_(void) {
-        std::size_t N = size<IntType>();
-        std::size_t S_size = N * 4; // epsilon=1 => 2*(1+epsilon)=4
-
-        std::vector<IntType> S(S_size); // [!] gap = 0, needs to assure there's no 0 in data
-
-        std::size_t mid = S_size / 2;
-        S[mid] = at<IntType>(0);
-
-        std::size_t total = 1;
-        std::size_t round = 1;
-        std::size_t insertion;
-
-        IntType val;
-
-        while (total < N) {
-            insertion = std::min(N - total, (round <<= 1));
-            Rebalance(S, total);
-            std::vector<std::pair<IntType, std::size_t>> sorted(total);
-            for (size_t i = 0, k = 0; i < S_size && k < total; ++i) {
-                tr.access<1>();
-                if (S[i]) {
-                    tr.access<1>();
-                    sorted[k++] = std::make_pair(S[i], i);
-                }
-            }
-
-            bool retry = false;
-            for (std::size_t j = total; j < total + insertion; ++j) {
-                if (!retry) [[likely]] val = at<IntType>(j);
-                else {
-                    Rebalance(S, --j);
-                    sorted.clear();
-                    for (size_t i = 0; i < S_size; ++i) {
-                        tr.access<1>();
-                        if (S[i]) {
-                            tr.access<1>();
-                            sorted.push_back(std::make_pair(S[i], i));
-                        }
-                    }
-                }
-                retry = false;
-                std::size_t idx = BinarySearch(sorted, val); // S[idx] <= val
-
-                if (S[idx] <= val) { // insert right
-                    while (true) {
-                        if (++idx >= S_size) {
-                            retry = true;
-                            break;
-                        }
-                        IntType& occupied = S[idx]; tr.access<1>();
-                        if (!occupied) break;
-                        tr.comp<1>();
-                        if (val < occupied) { std::swap(occupied, val); tr.access<3>(); }
-                    }
-                } else { // insert left
-                    while (true) {
-                        if (idx-- == 0) {
-                            retry = true;
-                            break;
-                        }
-                        IntType& occupied = S[idx]; tr.access<1>();
-                        if (!occupied) break;
-                        tr.comp<1>();
-                        if (val > occupied) { std::swap(occupied, val); tr.access<3>(); }
-                        // (val >  occupied) leads to unstable sort
-                    }
-                }
-                if (retry) [[unlikely]] continue;
-                S[idx] = val; tr.access<1>();
-            }
-            total += insertion;
-        }
-
-        for (std::size_t i = 0, k = 0; i < S_size && k < N; ++i) {
-            tr.access<1>();
-            if (!S[i]) continue;
-            set_val<IntType>(k++, S[i]); tr.access<1>();
-        }
-    }
-
-    void run(void) {
-        switch (mnt.meta.bsize) {
-        case 8:  run_<std::uint8_t >(); break;
-        case 16: run_<std::uint16_t>(); break;
-        case 32: run_<std::uint32_t>(); break;
-        case 64: run_<std::uint64_t>(); break;
-        }
-    }
-};
+     void run_(void) {
+         std::size_t N = size<IntType>();
+         std::size_t S_size = N * 3;
+ 
+         std::vector<IntType> S(S_size); // [!] gap = 0, needs to assure there's no 0 in data
+ 
+         std::size_t mid = S_size / 2;
+         S[mid] = at<IntType>(0);
+ 
+         std::size_t total = 1;
+         std::size_t round = 1;
+         std::size_t insertion;
+ 
+         while (total < N) {
+             insertion = std::min(N - total, (round <<= 1));
+             Rebalance(S, total);
+             std::vector<std::pair<IntType, std::size_t>> sorted(total);
+             for (size_t i = 0, k = 0; i < S_size && k < total; ++i) {
+                 tr.access<1>();
+                 if (S[i]) {
+                     tr.access<1>();
+                     sorted[k++] = std::make_pair(S[i], i);
+                 }
+             }
+ 
+             for (std::size_t j = total; j < total + insertion; ++j) {
+                 IntType val = at<IntType>(j);
+                 std::size_t idx = BinarySearch(sorted, val); // S[idx] <= val
+ 
+                 tr.comp<4>();
+                 if ((S[0] && S[idx-1]) || (S[S_size-1] && S[idx+1])) { // no sufficient gap (prediction)
+                     Rebalance(S, j);
+                     sorted.clear();
+                     for (size_t i = 0; i < S_size; ++i) {
+                         tr.access<1>();
+                         if (S[i]) {
+                             tr.access<1>();
+                             sorted.push_back(std::make_pair(S[i], i));
+                         }
+                     }
+                     --j; continue;
+                 }
+ 
+                 if (S[idx] <= val) { // insert-right
+                     while (true) {
+                         IntType& occupied = S[++idx]; tr.access<1>();
+                         if (!occupied) break;
+                         tr.comp<1>();
+                         if (val < occupied) { std::swap(occupied, val); tr.access<3>(); }
+                     }
+                 } else { // insert-left
+                     while (true) {
+                         IntType& occupied = S[--idx]; tr.access<1>();
+                         if (!occupied) break;
+                         tr.comp<1>();
+                         if (val > occupied) { std::swap(occupied, val); tr.access<3>(); }
+                         // to be stable, >= instead of >
+                     }
+                 }
+                 S[idx] = val; tr.access<1>();
+             }
+             total += insertion;
+         }
+ 
+         for (std::size_t i = 0, k = 0; i < S_size && k < N; ++i) {
+             tr.access<1>();
+             if (!S[i]) continue;
+             set_val<IntType>(k++, S[i]); tr.access<1>();
+         }
+     }
+ 
+     void run(void) {
+         switch (mnt.meta.bsize) {
+         case 8:  run_<std::uint8_t >(); break;
+         case 16: run_<std::uint16_t>(); break;
+         case 32: run_<std::uint32_t>(); break;
+         case 64: run_<std::uint64_t>(); break;
+         }
+     }
+ };
 
 class Cocktail : public SortBase {
 public:

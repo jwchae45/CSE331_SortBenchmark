@@ -1,24 +1,114 @@
 ================= BENCHMARK INFO =================
       Test Data : int32_1K_uniform_noise_1
  Sorting Method : quick_mid
-      Iteration : 10
+      Iteration : 100
 ==================================================
 [    0.000] Started
-[    0.000] Iteration  1 / 10 => 46.564 us
-[    0.000] Iteration  2 / 10 => 41.466 us
-[    0.000] Iteration  3 / 10 => 37.642 us
-[    0.000] Iteration  4 / 10 => 35.355 us
-[    0.000] Iteration  5 / 10 => 33.581 us
-[    0.000] Iteration  6 / 10 => 32.249 us
-[    0.000] Iteration  7 / 10 => 31.250 us
-[    0.000] Iteration  8 / 10 => 30.312 us
-[    0.000] Iteration  9 / 10 => 30.458 us
-[    0.000] Iteration 10 / 10 => 38.861 us
-[    0.000] Finished
+[    0.000] Iteration   1 / 100 => 327.228 us
+[    0.000] Iteration   2 / 100 => 321.298 us
+[    0.001] Iteration   3 / 100 => 320.285 us
+[    0.001] Iteration   4 / 100 => 323.900 us
+[    0.001] Iteration   5 / 100 => 320.359 us
+[    0.002] Iteration   6 / 100 => 323.165 us
+[    0.002] Iteration   7 / 100 => 320.315 us
+[    0.002] Iteration   8 / 100 => 320.570 us
+[    0.003] Iteration   9 / 100 => 331.152 us
+[    0.003] Iteration  10 / 100 => 320.647 us
+[    0.004] Iteration  11 / 100 => 320.651 us
+[    0.004] Iteration  12 / 100 => 323.540 us
+[    0.004] Iteration  13 / 100 => 320.273 us
+[    0.005] Iteration  14 / 100 => 320.229 us
+[    0.005] Iteration  15 / 100 => 323.217 us
+[    0.005] Iteration  16 / 100 => 320.454 us
+[    0.006] Iteration  17 / 100 => 320.372 us
+[    0.006] Iteration  18 / 100 => 322.898 us
+[    0.006] Iteration  19 / 100 => 320.746 us
+[    0.007] Iteration  20 / 100 => 320.663 us
+[    0.007] Iteration  21 / 100 => 322.493 us
+[    0.007] Iteration  22 / 100 => 321.041 us
+[    0.008] Iteration  23 / 100 => 320.600 us
+[    0.008] Iteration  24 / 100 => 323.934 us
+[    0.008] Iteration  25 / 100 => 320.578 us
+[    0.009] Iteration  26 / 100 => 320.540 us
+[    0.009] Iteration  27 / 100 => 322.848 us
+[    0.009] Iteration  28 / 100 => 320.417 us
+[    0.010] Iteration  29 / 100 => 320.518 us
+[    0.010] Iteration  30 / 100 => 320.743 us
+[    0.010] Iteration  31 / 100 => 320.550 us
+[    0.011] Iteration  32 / 100 => 352.793 us
+[    0.011] Iteration  33 / 100 => 320.410 us
+[    0.012] Iteration  34 / 100 => 320.518 us
+[    0.012] Iteration  35 / 100 => 323.126 us
+[    0.012] Iteration  36 / 100 => 320.572 us
+[    0.013] Iteration  37 / 100 => 320.538 us
+[    0.013] Iteration  38 / 100 => 322.994 us
+[    0.013] Iteration  39 / 100 => 320.573 us
+[    0.014] Iteration  40 / 100 => 320.413 us
+[    0.014] Iteration  41 / 100 => 322.261 us
+[    0.014] Iteration  42 / 100 => 320.861 us
+[    0.015] Iteration  43 / 100 => 320.765 us
+[    0.015] Iteration  44 / 100 => 323.190 us
+[    0.015] Iteration  45 / 100 => 320.685 us
+[    0.016] Iteration  46 / 100 => 320.698 us
+[    0.016] Iteration  47 / 100 => 323.041 us
+[    0.016] Iteration  48 / 100 => 320.590 us
+[    0.017] Iteration  49 / 100 => 320.690 us
+[    0.017] Iteration  50 / 100 => 322.603 us
+[    0.017] Iteration  51 / 100 => 320.349 us
+[    0.018] Iteration  52 / 100 => 322.804 us
+[    0.018] Iteration  53 / 100 => 320.558 us
+[    0.018] Iteration  54 / 100 => 320.593 us
+[    0.019] Iteration  55 / 100 => 323.110 us
+[    0.019] Iteration  56 / 100 => 320.267 us
+[    0.020] Iteration  57 / 100 => 320.891 us
+[    0.020] Iteration  58 / 100 => 323.089 us
+[    0.020] Iteration  59 / 100 => 320.847 us
+[    0.021] Iteration  60 / 100 => 320.707 us
+[    0.021] Iteration  61 / 100 => 324.903 us
+[    0.021] Iteration  62 / 100 => 320.804 us
+[    0.022] Iteration  63 / 100 => 320.680 us
+[    0.022] Iteration  64 / 100 => 322.683 us
+[    0.022] Iteration  65 / 100 => 321.018 us
+[    0.023] Iteration  66 / 100 => 320.809 us
+[    0.023] Iteration  67 / 100 => 324.488 us
+[    0.023] Iteration  68 / 100 => 320.597 us
+[    0.024] Iteration  69 / 100 => 320.680 us
+[    0.024] Iteration  70 / 100 => 323.079 us
+[    0.024] Iteration  71 / 100 => 320.572 us
+[    0.025] Iteration  72 / 100 => 320.544 us
+[    0.025] Iteration  73 / 100 => 320.493 us
+[    0.025] Iteration  74 / 100 => 320.413 us
+[    0.026] Iteration  75 / 100 => 323.608 us
+[    0.026] Iteration  76 / 100 => 320.427 us
+[    0.026] Iteration  77 / 100 => 320.759 us
+[    0.027] Iteration  78 / 100 => 323.132 us
+[    0.027] Iteration  79 / 100 => 320.801 us
+[    0.028] Iteration  80 / 100 => 320.460 us
+[    0.028] Iteration  81 / 100 => 324.141 us
+[    0.028] Iteration  82 / 100 => 320.469 us
+[    0.029] Iteration  83 / 100 => 320.285 us
+[    0.029] Iteration  84 / 100 => 322.964 us
+[    0.029] Iteration  85 / 100 => 320.760 us
+[    0.030] Iteration  86 / 100 => 320.606 us
+[    0.030] Iteration  87 / 100 => 323.020 us
+[    0.030] Iteration  88 / 100 => 320.506 us
+[    0.031] Iteration  89 / 100 => 320.901 us
+[    0.031] Iteration  90 / 100 => 323.074 us
+[    0.031] Iteration  91 / 100 => 320.534 us
+[    0.032] Iteration  92 / 100 => 320.385 us
+[    0.032] Iteration  93 / 100 => 323.193 us
+[    0.032] Iteration  94 / 100 => 320.768 us
+[    0.033] Iteration  95 / 100 => 320.818 us
+[    0.033] Iteration  96 / 100 => 322.956 us
+[    0.033] Iteration  97 / 100 => 320.660 us
+[    0.034] Iteration  98 / 100 => 322.819 us
+[    0.034] Iteration  99 / 100 => 320.463 us
+[    0.034] Iteration 100 / 100 => 320.483 us
+[    0.035] Finished
 ================ BENCHMARK RESULT ================
      Input Size (N) : 1024
- Total Elapsed Time : 357.738 us
-  Mean Elapsed Time :  35.774 us
-   # Array Accesses : 192900. / iteration
-      # Comparisons : 164560. / iteration
+ Total Elapsed Time : 32187.515 us
+  Mean Elapsed Time :   321.875 us
+   # Array Accesses : 1929000. / iteration
+      # Comparisons : 1645600. / iteration
 ==================================================

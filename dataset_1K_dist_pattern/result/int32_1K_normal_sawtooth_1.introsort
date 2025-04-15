@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_sawtooth_1
+ Sorting Method : introsort
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 36.767 us
+[    0.000] Iteration  2 / 10 => 34.177 us
+[    0.000] Iteration  3 / 10 => 35.665 us
+[    0.000] Iteration  4 / 10 => 30.090 us
+[    0.000] Iteration  5 / 10 => 29.081 us
+[    0.000] Iteration  6 / 10 => 27.725 us
+[    0.000] Iteration  7 / 10 => 27.428 us
+[    0.000] Iteration  8 / 10 => 26.452 us
+[    0.000] Iteration  9 / 10 => 25.993 us
+[    0.000] Iteration 10 / 10 => 25.519 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 298.897 us
+  Mean Elapsed Time :  29.890 us
+   # Array Accesses : 302750. / iteration
+      # Comparisons : 150400. / iteration
+==================================================

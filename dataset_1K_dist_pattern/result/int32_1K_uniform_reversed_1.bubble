@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_uniform_reversed_1
+ Sorting Method : bubble
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 2408.771 us
+[    0.002] Iteration  2 / 10 => 2409.566 us
+[    0.005] Iteration  3 / 10 => 2414.357 us
+[    0.007] Iteration  4 / 10 => 2408.646 us
+[    0.010] Iteration  5 / 10 => 2408.797 us
+[    0.012] Iteration  6 / 10 => 2407.473 us
+[    0.015] Iteration  7 / 10 => 2409.208 us
+[    0.017] Iteration  8 / 10 => 2406.922 us
+[    0.019] Iteration  9 / 10 => 2408.961 us
+[    0.022] Iteration 10 / 10 => 2407.068 us
+[    0.024] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 24089.769 us
+  Mean Elapsed Time :  2408.977 us
+   # Array Accesses : 26188800. / iteration
+      # Comparisons :  5237760. / iteration
+==================================================

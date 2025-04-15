@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_frontsorted_1
+ Sorting Method : bubble
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1169.642 us
+[    0.001] Iteration  2 / 10 => 1205.962 us
+[    0.002] Iteration  3 / 10 => 1208.513 us
+[    0.004] Iteration  4 / 10 => 1206.209 us
+[    0.005] Iteration  5 / 10 => 1198.057 us
+[    0.006] Iteration  6 / 10 => 1167.435 us
+[    0.007] Iteration  7 / 10 => 1179.222 us
+[    0.008] Iteration  8 / 10 => 1207.414 us
+[    0.010] Iteration  9 / 10 => 1166.084 us
+[    0.011] Iteration 10 / 10 => 1169.435 us
+[    0.012] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 11877.973 us
+  Mean Elapsed Time :  1187.797 us
+   # Array Accesses : 16019190. / iteration
+      # Comparisons :  5232480. / iteration
+==================================================

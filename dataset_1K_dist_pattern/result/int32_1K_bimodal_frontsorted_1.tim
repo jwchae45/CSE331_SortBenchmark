@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_bimodal_frontsorted_1
+ Sorting Method : tim
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 30.407 us
+[    0.000] Iteration  2 / 10 => 24.486 us
+[    0.000] Iteration  3 / 10 => 22.125 us
+[    0.000] Iteration  4 / 10 => 20.419 us
+[    0.000] Iteration  5 / 10 => 19.628 us
+[    0.000] Iteration  6 / 10 => 19.206 us
+[    0.000] Iteration  7 / 10 => 18.083 us
+[    0.000] Iteration  8 / 10 => 17.752 us
+[    0.000] Iteration  9 / 10 => 17.517 us
+[    0.000] Iteration 10 / 10 => 17.161 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 206.784 us
+  Mean Elapsed Time :  20.678 us
+   # Array Accesses : 226460. / iteration
+      # Comparisons :  65320. / iteration
+==================================================

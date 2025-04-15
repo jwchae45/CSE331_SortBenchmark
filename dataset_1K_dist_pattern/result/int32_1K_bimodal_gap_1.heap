@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_bimodal_gap_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 147.770 us
+[    0.000] Iteration  2 / 10 => 147.567 us
+[    0.000] Iteration  3 / 10 => 142.664 us
+[    0.001] Iteration  4 / 10 => 140.491 us
+[    0.001] Iteration  5 / 10 => 141.659 us
+[    0.001] Iteration  6 / 10 => 139.341 us
+[    0.001] Iteration  7 / 10 => 139.616 us
+[    0.001] Iteration  8 / 10 => 137.675 us
+[    0.001] Iteration  9 / 10 => 138.943 us
+[    0.002] Iteration 10 / 10 => 138.759 us
+[    0.002] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 1414.485 us
+  Mean Elapsed Time :  141.448 us
+   # Array Accesses : 510950. / iteration
+      # Comparisons : 186850. / iteration
+==================================================

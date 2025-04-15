@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_constant_random_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 57.828 us
+[    0.000] Iteration  2 / 10 => 44.256 us
+[    0.000] Iteration  3 / 10 => 42.926 us
+[    0.000] Iteration  4 / 10 => 76.651 us
+[    0.000] Iteration  5 / 10 => 42.188 us
+[    0.000] Iteration  6 / 10 => 41.889 us
+[    0.000] Iteration  7 / 10 => 41.803 us
+[    0.000] Iteration  8 / 10 => 41.174 us
+[    0.000] Iteration  9 / 10 => 40.982 us
+[    0.001] Iteration 10 / 10 => 40.616 us
+[    0.001] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 470.313 us
+  Mean Elapsed Time :  47.031 us
+   # Array Accesses : 307170. / iteration
+      # Comparisons :  51200. / iteration
+==================================================

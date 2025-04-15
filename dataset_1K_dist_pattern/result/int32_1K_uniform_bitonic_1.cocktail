@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_uniform_bitonic_1
+ Sorting Method : cocktail
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 959.964 us
+[    0.001] Iteration  2 / 10 => 926.390 us
+[    0.002] Iteration  3 / 10 => 957.958 us
+[    0.003] Iteration  4 / 10 => 916.026 us
+[    0.004] Iteration  5 / 10 => 985.152 us
+[    0.005] Iteration  6 / 10 => 922.036 us
+[    0.006] Iteration  7 / 10 => 919.551 us
+[    0.007] Iteration  8 / 10 => 919.177 us
+[    0.008] Iteration  9 / 10 => 913.295 us
+[    0.009] Iteration 10 / 10 => 919.008 us
+[    0.009] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 9338.557 us
+  Mean Elapsed Time :  933.856 us
+   # Array Accesses : 16158590. / iteration
+      # Comparisons :  4095670. / iteration
+==================================================

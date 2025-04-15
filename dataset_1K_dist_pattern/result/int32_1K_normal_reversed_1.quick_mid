@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_reversed_1
+ Sorting Method : quick_mid
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 13.867 us
+[    0.000] Iteration  2 / 10 => 13.038 us
+[    0.000] Iteration  3 / 10 => 13.016 us
+[    0.000] Iteration  4 / 10 => 13.018 us
+[    0.000] Iteration  5 / 10 => 12.997 us
+[    0.000] Iteration  6 / 10 => 12.997 us
+[    0.000] Iteration  7 / 10 => 12.972 us
+[    0.000] Iteration  8 / 10 => 12.988 us
+[    0.000] Iteration  9 / 10 => 13.031 us
+[    0.000] Iteration 10 / 10 => 13.004 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 130.928 us
+  Mean Elapsed Time :  13.093 us
+   # Array Accesses : 158690. / iteration
+      # Comparisons : 143350. / iteration
+==================================================

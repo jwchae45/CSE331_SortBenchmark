@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_uniform_noise_1
+ Sorting Method : bubble
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 108.323 us
+[    0.000] Iteration  2 / 10 => 107.366 us
+[    0.000] Iteration  3 / 10 => 105.833 us
+[    0.000] Iteration  4 / 10 => 105.834 us
+[    0.000] Iteration  5 / 10 => 105.579 us
+[    0.001] Iteration  6 / 10 => 109.403 us
+[    0.001] Iteration  7 / 10 => 105.452 us
+[    0.001] Iteration  8 / 10 => 105.202 us
+[    0.001] Iteration  9 / 10 => 105.339 us
+[    0.001] Iteration 10 / 10 => 105.254 us
+[    0.001] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 1063.585 us
+  Mean Elapsed Time :  106.358 us
+   # Array Accesses : 1705990. / iteration
+      # Comparisons :  786800. / iteration
+==================================================

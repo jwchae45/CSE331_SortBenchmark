@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_bimodal_almost_1
+ Sorting Method : merge
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 32.129 us
+[    0.000] Iteration  2 / 10 => 10.753 us
+[    0.000] Iteration  3 / 10 => 9.730 us
+[    0.000] Iteration  4 / 10 => 9.204 us
+[    0.000] Iteration  5 / 10 => 8.838 us
+[    0.000] Iteration  6 / 10 => 8.753 us
+[    0.000] Iteration  7 / 10 => 8.570 us
+[    0.000] Iteration  8 / 10 => 8.313 us
+[    0.000] Iteration  9 / 10 => 8.226 us
+[    0.000] Iteration 10 / 10 => 8.252 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 112.768 us
+  Mean Elapsed Time :  11.277 us
+   # Array Accesses : 446840. / iteration
+      # Comparisons : 141500. / iteration
+==================================================

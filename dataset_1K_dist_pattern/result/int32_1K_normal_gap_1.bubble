@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_gap_1
+ Sorting Method : bubble
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1670.696 us
+[    0.002] Iteration  2 / 10 => 1668.801 us
+[    0.003] Iteration  3 / 10 => 1628.889 us
+[    0.005] Iteration  4 / 10 => 1632.143 us
+[    0.007] Iteration  5 / 10 => 1630.467 us
+[    0.008] Iteration  6 / 10 => 1592.111 us
+[    0.010] Iteration  7 / 10 => 1601.101 us
+[    0.012] Iteration  8 / 10 => 1586.076 us
+[    0.013] Iteration  9 / 10 => 1594.884 us
+[    0.015] Iteration 10 / 10 => 1595.591 us
+[    0.016] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 16200.759 us
+  Mean Elapsed Time :  1620.076 us
+   # Array Accesses : 18268950. / iteration
+      # Comparisons :  5188260. / iteration
+==================================================

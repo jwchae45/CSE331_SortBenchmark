@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_uniform_noise_1
+ Sorting Method : cocktail
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 33.971 us
+[    0.000] Iteration  2 / 10 => 36.605 us
+[    0.000] Iteration  3 / 10 => 29.719 us
+[    0.000] Iteration  4 / 10 => 28.504 us
+[    0.000] Iteration  5 / 10 => 26.560 us
+[    0.000] Iteration  6 / 10 => 26.202 us
+[    0.000] Iteration  7 / 10 => 24.836 us
+[    0.000] Iteration  8 / 10 => 24.705 us
+[    0.000] Iteration  9 / 10 => 23.575 us
+[    0.000] Iteration 10 / 10 => 23.563 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 278.240 us
+  Mean Elapsed Time :  27.824 us
+   # Array Accesses : 396930. / iteration
+      # Comparisons : 132270. / iteration
+==================================================

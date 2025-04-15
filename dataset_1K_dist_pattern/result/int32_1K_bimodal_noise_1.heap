@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_bimodal_noise_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 137.878 us
+[    0.000] Iteration  2 / 10 => 141.420 us
+[    0.000] Iteration  3 / 10 => 151.339 us
+[    0.001] Iteration  4 / 10 => 138.615 us
+[    0.001] Iteration  5 / 10 => 136.889 us
+[    0.001] Iteration  6 / 10 => 136.529 us
+[    0.001] Iteration  7 / 10 => 136.481 us
+[    0.001] Iteration  8 / 10 => 135.925 us
+[    0.001] Iteration  9 / 10 => 142.753 us
+[    0.002] Iteration 10 / 10 => 135.409 us
+[    0.002] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 1393.238 us
+  Mean Elapsed Time :  139.324 us
+   # Array Accesses : 649200. / iteration
+      # Comparisons : 231460. / iteration
+==================================================

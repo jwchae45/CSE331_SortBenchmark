@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_bimodal_sawtooth_1
+ Sorting Method : introsort
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 34.200 us
+[    0.000] Iteration  2 / 10 => 31.405 us
+[    0.000] Iteration  3 / 10 => 28.205 us
+[    0.000] Iteration  4 / 10 => 26.408 us
+[    0.000] Iteration  5 / 10 => 25.596 us
+[    0.000] Iteration  6 / 10 => 24.629 us
+[    0.000] Iteration  7 / 10 => 23.829 us
+[    0.000] Iteration  8 / 10 => 23.440 us
+[    0.000] Iteration  9 / 10 => 22.711 us
+[    0.000] Iteration 10 / 10 => 22.276 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 262.699 us
+  Mean Elapsed Time :  26.270 us
+   # Array Accesses : 280610. / iteration
+      # Comparisons : 129070. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_uniform_gap_1
+ Sorting Method : cocktail
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1078.724 us
+[    0.001] Iteration  2 / 10 => 1112.011 us
+[    0.002] Iteration  3 / 10 => 1083.880 us
+[    0.003] Iteration  4 / 10 => 1045.890 us
+[    0.004] Iteration  5 / 10 => 1088.060 us
+[    0.006] Iteration  6 / 10 => 1091.827 us
+[    0.007] Iteration  7 / 10 => 1039.653 us
+[    0.008] Iteration  8 / 10 => 1044.593 us
+[    0.009] Iteration  9 / 10 => 1042.230 us
+[    0.010] Iteration 10 / 10 => 1045.934 us
+[    0.011] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 10672.802 us
+  Mean Elapsed Time :  1067.280 us
+   # Array Accesses : 16035740. / iteration
+      # Comparisons :  4007830. / iteration
+==================================================

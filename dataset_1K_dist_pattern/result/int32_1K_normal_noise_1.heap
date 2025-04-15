@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_noise_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 146.569 us
+[    0.000] Iteration  2 / 10 => 141.225 us
+[    0.000] Iteration  3 / 10 => 139.280 us
+[    0.001] Iteration  4 / 10 => 138.445 us
+[    0.001] Iteration  5 / 10 => 138.382 us
+[    0.001] Iteration  6 / 10 => 137.852 us
+[    0.001] Iteration  7 / 10 => 171.192 us
+[    0.001] Iteration  8 / 10 => 136.387 us
+[    0.001] Iteration  9 / 10 => 136.134 us
+[    0.002] Iteration 10 / 10 => 135.250 us
+[    0.002] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 1420.716 us
+  Mean Elapsed Time :  142.072 us
+   # Array Accesses : 649860. / iteration
+      # Comparisons : 231540. / iteration
+==================================================

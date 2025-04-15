@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_sawtooth_1
+ Sorting Method : cocktail
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 784.942 us
+[    0.001] Iteration  2 / 10 => 783.419 us
+[    0.002] Iteration  3 / 10 => 782.710 us
+[    0.002] Iteration  4 / 10 => 780.261 us
+[    0.003] Iteration  5 / 10 => 821.602 us
+[    0.004] Iteration  6 / 10 => 782.243 us
+[    0.005] Iteration  7 / 10 => 784.155 us
+[    0.006] Iteration  8 / 10 => 782.644 us
+[    0.006] Iteration  9 / 10 => 780.114 us
+[    0.007] Iteration 10 / 10 => 790.420 us
+[    0.008] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 7872.510 us
+  Mean Elapsed Time :  787.251 us
+   # Array Accesses : 14119630. / iteration
+      # Comparisons :  3784880. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_sawtooth_1
+ Sorting Method : bubble
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1405.030 us
+[    0.001] Iteration  2 / 10 => 1323.101 us
+[    0.003] Iteration  3 / 10 => 1323.896 us
+[    0.004] Iteration  4 / 10 => 1321.768 us
+[    0.005] Iteration  5 / 10 => 1322.122 us
+[    0.007] Iteration  6 / 10 => 1334.068 us
+[    0.008] Iteration  7 / 10 => 1323.677 us
+[    0.009] Iteration  8 / 10 => 1323.772 us
+[    0.011] Iteration  9 / 10 => 1323.167 us
+[    0.012] Iteration 10 / 10 => 1321.634 us
+[    0.013] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 13322.235 us
+  Mean Elapsed Time :  1332.224 us
+   # Array Accesses : 16852470. / iteration
+      # Comparisons :  5151300. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_bimodal_reversed_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 65.404 us
+[    0.000] Iteration  2 / 10 => 46.605 us
+[    0.000] Iteration  3 / 10 => 45.419 us
+[    0.000] Iteration  4 / 10 => 44.247 us
+[    0.000] Iteration  5 / 10 => 43.988 us
+[    0.000] Iteration  6 / 10 => 43.603 us
+[    0.000] Iteration  7 / 10 => 42.493 us
+[    0.000] Iteration  8 / 10 => 42.568 us
+[    0.000] Iteration  9 / 10 => 42.622 us
+[    0.001] Iteration 10 / 10 => 42.736 us
+[    0.001] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 459.685 us
+  Mean Elapsed Time :  45.968 us
+   # Array Accesses : 307170. / iteration
+      # Comparisons :  51200. / iteration
+==================================================

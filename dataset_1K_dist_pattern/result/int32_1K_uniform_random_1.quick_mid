@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_uniform_random_1
+ Sorting Method : quick_mid
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 60.555 us
+[    0.000] Iteration  2 / 10 => 56.204 us
+[    0.000] Iteration  3 / 10 => 52.558 us
+[    0.000] Iteration  4 / 10 => 49.657 us
+[    0.000] Iteration  5 / 10 => 48.786 us
+[    0.000] Iteration  6 / 10 => 47.018 us
+[    0.000] Iteration  7 / 10 => 45.576 us
+[    0.000] Iteration  8 / 10 => 45.223 us
+[    0.001] Iteration  9 / 10 => 44.259 us
+[    0.001] Iteration 10 / 10 => 44.258 us
+[    0.001] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 494.094 us
+  Mean Elapsed Time :  49.409 us
+   # Array Accesses : 245250. / iteration
+      # Comparisons : 181410. / iteration
+==================================================

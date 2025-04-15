@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_gap_1
+ Sorting Method : quick
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 49.061 us
+[    0.000] Iteration  2 / 10 => 44.060 us
+[    0.000] Iteration  3 / 10 => 40.412 us
+[    0.000] Iteration  4 / 10 => 38.347 us
+[    0.000] Iteration  5 / 10 => 37.513 us
+[    0.000] Iteration  6 / 10 => 36.323 us
+[    0.000] Iteration  7 / 10 => 35.718 us
+[    0.000] Iteration  8 / 10 => 34.825 us
+[    0.000] Iteration  9 / 10 => 33.855 us
+[    0.000] Iteration 10 / 10 => 34.221 us
+[    0.001] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 384.335 us
+  Mean Elapsed Time :  38.434 us
+   # Array Accesses : 242520. / iteration
+      # Comparisons : 159900. / iteration
+==================================================

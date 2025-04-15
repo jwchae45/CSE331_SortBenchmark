@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_fewunique_random_1
+ Sorting Method : tim
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 39.249 us
+[    0.000] Iteration  2 / 10 => 90.748 us
+[    0.000] Iteration  3 / 10 => 32.403 us
+[    0.000] Iteration  4 / 10 => 31.114 us
+[    0.000] Iteration  5 / 10 => 29.690 us
+[    0.000] Iteration  6 / 10 => 29.584 us
+[    0.000] Iteration  7 / 10 => 28.655 us
+[    0.000] Iteration  8 / 10 => 28.225 us
+[    0.000] Iteration  9 / 10 => 27.895 us
+[    0.000] Iteration 10 / 10 => 27.818 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 365.381 us
+  Mean Elapsed Time :  36.538 us
+   # Array Accesses : 408490. / iteration
+      # Comparisons : 109350. / iteration
+==================================================

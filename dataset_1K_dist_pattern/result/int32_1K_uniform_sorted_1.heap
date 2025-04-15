@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_uniform_sorted_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 125.145 us
+[    0.000] Iteration  2 / 10 => 129.044 us
+[    0.000] Iteration  3 / 10 => 127.403 us
+[    0.001] Iteration  4 / 10 => 125.507 us
+[    0.001] Iteration  5 / 10 => 130.282 us
+[    0.001] Iteration  6 / 10 => 127.792 us
+[    0.001] Iteration  7 / 10 => 129.775 us
+[    0.001] Iteration  8 / 10 => 130.048 us
+[    0.001] Iteration  9 / 10 => 129.096 us
+[    0.001] Iteration 10 / 10 => 126.332 us
+[    0.002] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 1280.424 us
+  Mean Elapsed Time :  128.042 us
+   # Array Accesses : 707460. / iteration
+      # Comparisons : 251230. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_bitonic_1
+ Sorting Method : introsort
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 44.196 us
+[    0.000] Iteration  2 / 10 => 37.252 us
+[    0.000] Iteration  3 / 10 => 34.305 us
+[    0.000] Iteration  4 / 10 => 32.570 us
+[    0.000] Iteration  5 / 10 => 31.810 us
+[    0.000] Iteration  6 / 10 => 30.410 us
+[    0.000] Iteration  7 / 10 => 30.310 us
+[    0.000] Iteration  8 / 10 => 29.315 us
+[    0.000] Iteration  9 / 10 => 28.847 us
+[    0.000] Iteration 10 / 10 => 28.454 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 327.469 us
+  Mean Elapsed Time :  32.747 us
+   # Array Accesses : 300560. / iteration
+      # Comparisons : 146530. / iteration
+==================================================

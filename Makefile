@@ -45,9 +45,12 @@ N := 1K 2K 4K 8K 16K 32K 64K 128K 256K 512K 1M
 DATASET_N_UNIFORM_RANDOM := ./dataset_N_uniform_random
 DATASET_N_UNIFORM_RANDOM_FILES := $(basename $(notdir $(wildcard $(DATASET_N_UNIFORM_RANDOM)/*.unsorted)))
 
-PATTERN := random almost noise reversed sawtooth bitonic frontsorted gap
+PATTERN := random almost noise sorted reversed sawtooth bitonic frontsorted gap
 DATASET_1M_DIST_PATTERN := ./dataset_1M_dist_pattern
 DATASET_1M_DIST_PATTERN_FILES := $(basename $(notdir $(wildcard $(DATASET_1M_DIST_PATTERN)/*.unsorted)))
+
+DATASET_1K_DIST_PATTERN := ./dataset_1K_dist_pattern
+DATASET_1K_DIST_PATTERN_FILES := $(basename $(notdir $(wildcard $(DATASET_1K_DIST_PATTERN)/*.unsorted)))
 
 DATASET_SMALL_UNIFORM_RANDOM := ./dataset_small_uniform_random
 DATASET_SMALL_UNIFORM_RANDOM_FILES := $(basename $(notdir $(wildcard $(DATASET_SMALL_UNIFORM_RANDOM)/*.unsorted)))
@@ -65,6 +68,13 @@ datagen-1m-dist-pattern:
 		$(foreach pattern, $(PATTERN), \
 			./datagen --seed=$(RANDOM_SEED) --N=1M --path=$(DATASET_1M_DIST_PATTERN) --dist=$(dist) --pattern=$(pattern);))
 	@python3 plot.py --path=$(DATASET_1M_DIST_PATTERN)
+
+datagen-1k-dist-pattern:
+	@mkdir -p $(DATASET_1K_DIST_PATTERN)
+	@$(foreach dist, $(DISTRIBUTION), \
+		$(foreach pattern, $(PATTERN), \
+			./datagen --seed=$(RANDOM_SEED) --N=1K --path=$(DATASET_1K_DIST_PATTERN) --dist=$(dist) --pattern=$(pattern);))
+	@python3 plot.py --path=$(DATASET_1K_DIST_PATTERN)
 
 datagen-small-uniform-random:
 	@mkdir -p $(DATASET_SMALL_UNIFORM_RANDOM)
@@ -92,6 +102,12 @@ benchmark-1m-dist-pattern:
 	@$(foreach method, $(METHOD), \
 		$(foreach filename, $(DATASET_1M_DIST_PATTERN_FILES), \
 			./benchmark --iteration=$(ITERATION) --dataset=$(DATASET_1M_DIST_PATTERN)/$(filename) --method=$(method) --verbose > $(DATASET_1M_DIST_PATTERN)/result/$(filename).$(method);))
+
+benchmark-1k-dist-pattern:
+	@mkdir -p $(DATASET_1K_DIST_PATTERN)/result
+	@$(foreach method, $(METHOD), \
+		$(foreach filename, $(DATASET_1K_DIST_PATTERN_FILES), \
+			./benchmark --iteration=$(ITERATION) --dataset=$(DATASET_1K_DIST_PATTERN)/$(filename) --method=$(method) --verbose > $(DATASET_1K_DIST_PATTERN)/result/$(filename).$(method);))
 
 benchmark-small-uniform-random:
 	@mkdir -p $(DATASET_SMALL_UNIFORM_RANDOM)/result

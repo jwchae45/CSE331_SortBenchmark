@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_uniform_frontsorted_1
+ Sorting Method : tim
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 40.153 us
+[    0.000] Iteration  2 / 10 => 33.213 us
+[    0.000] Iteration  3 / 10 => 29.637 us
+[    0.000] Iteration  4 / 10 => 26.954 us
+[    0.000] Iteration  5 / 10 => 26.285 us
+[    0.000] Iteration  6 / 10 => 25.414 us
+[    0.000] Iteration  7 / 10 => 24.321 us
+[    0.000] Iteration  8 / 10 => 23.391 us
+[    0.000] Iteration  9 / 10 => 23.190 us
+[    0.000] Iteration 10 / 10 => 23.060 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 275.618 us
+  Mean Elapsed Time :  27.562 us
+   # Array Accesses : 219440. / iteration
+      # Comparisons :  64050. / iteration
+==================================================

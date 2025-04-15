@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_bimodal_sorted_1
+ Sorting Method : cocktail
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1.099 us
+[    0.000] Iteration  2 / 10 => 0.981 us
+[    0.000] Iteration  3 / 10 => 0.966 us
+[    0.000] Iteration  4 / 10 => 0.957 us
+[    0.000] Iteration  5 / 10 => 0.957 us
+[    0.000] Iteration  6 / 10 => 0.963 us
+[    0.000] Iteration  7 / 10 => 0.955 us
+[    0.000] Iteration  8 / 10 => 0.958 us
+[    0.000] Iteration  9 / 10 => 0.958 us
+[    0.000] Iteration 10 / 10 => 0.956 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 9.750 us
+  Mean Elapsed Time : 0.975 us
+   # Array Accesses : 20460. / iteration
+      # Comparisons : 10230. / iteration
+==================================================

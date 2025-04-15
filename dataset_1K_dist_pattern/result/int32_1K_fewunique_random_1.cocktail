@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_fewunique_random_1
+ Sorting Method : cocktail
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 798.156 us
+[    0.001] Iteration  2 / 10 => 835.612 us
+[    0.002] Iteration  3 / 10 => 845.980 us
+[    0.003] Iteration  4 / 10 => 789.532 us
+[    0.003] Iteration  5 / 10 => 793.063 us
+[    0.004] Iteration  6 / 10 => 788.065 us
+[    0.005] Iteration  7 / 10 => 826.485 us
+[    0.006] Iteration  8 / 10 => 803.158 us
+[    0.007] Iteration  9 / 10 => 792.949 us
+[    0.007] Iteration 10 / 10 => 833.257 us
+[    0.008] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 8106.257 us
+  Mean Elapsed Time :  810.626 us
+   # Array Accesses : 13795730. / iteration
+      # Comparisons :  3790270. / iteration
+==================================================

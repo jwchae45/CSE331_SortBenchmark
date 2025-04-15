@@ -131,6 +131,7 @@ void generate(const std::size_t& iter,
     if (verbose) std::cout << "Fitting in " << pattern << " pattern...";
     if (pattern == "random") {
         // pass
+        // here, should shuffle data if datagen didn't randomly generated
     } else if (pattern == "almost") {
         std::sort(list.begin(), list.end());
         std::size_t n_swap = static_cast<std::size_t>(std::sqrt(list.size())); // N=1K => #swaps=32 | N=1M => #swaps=1K
@@ -145,6 +146,8 @@ void generate(const std::size_t& iter,
             for (std::size_t i = 0; i < n_swap; ++i)
                 swap(engine, list, w, w+window_size);
         }
+    } else if (pattern == "sorted") {
+        std::sort(list.begin(), list.end());
     } else if (pattern == "reversed") {
         std::sort(list.begin(), list.end(), [](IntType _a, IntType _b) -> bool {
             return _a >= _b;
@@ -193,12 +196,13 @@ int main(int argc, char** argv) {
         .default_value("uniform");
     
     args.add_argument("--pattern")
-        .choices("random", "almost", "noise", "reversed", "sawtooth", "bitonic", "frontsorted", "gap")
+        .choices("random", "almost", "noise", "sorted", "reversed", "sawtooth", "bitonic", "frontsorted", "gap")
         .default_value("random");
     
     /**********************************************************/
     /*      almost : global random swap                       */
     /*       noise : local random swap with sliding window    */
+    /*      sorted : already sorted                           */
     /*    reversed : reverse sorted                           */
     /*    sawtooth : (merge-like) locally ascending order     */
     /*     bitonic : alternating ascending/descending order   */

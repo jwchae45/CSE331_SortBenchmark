@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_bimodal_almost_1
+ Sorting Method : comb
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 31.033 us
+[    0.000] Iteration  2 / 10 => 29.817 us
+[    0.000] Iteration  3 / 10 => 28.189 us
+[    0.000] Iteration  4 / 10 => 27.146 us
+[    0.000] Iteration  5 / 10 => 26.821 us
+[    0.000] Iteration  6 / 10 => 26.279 us
+[    0.000] Iteration  7 / 10 => 25.761 us
+[    0.000] Iteration  8 / 10 => 25.694 us
+[    0.000] Iteration  9 / 10 => 25.535 us
+[    0.000] Iteration 10 / 10 => 25.323 us
+[    0.000] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 271.598 us
+  Mean Elapsed Time :  27.160 us
+   # Array Accesses : 508040. / iteration
+      # Comparisons : 212110. / iteration
+==================================================

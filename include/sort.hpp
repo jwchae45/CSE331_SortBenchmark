@@ -400,7 +400,6 @@ public:
             for (std::size_t j = total; j < total + insertion; ++j) {
                 if (!retry) [[likely]] val = at<IntType>(j);
                 else {
-                    retry = false;
                     Rebalance(S, --j);
                     sorted.clear();
                     for (size_t i = 0; i < S_size; ++i) {
@@ -411,15 +410,16 @@ public:
                         }
                     }
                 }
+                retry = false;
                 std::size_t idx = BinarySearch(sorted, val); // S[idx] <= val
 
                 if (S[idx] <= val) { // insert right
                     while (true) {
-                        if (++idx > S_size) {
+                        if (++idx >= S_size) {
                             retry = true;
                             break;
                         }
-                        IntType& occupied = S[++idx]; tr.access<1>();
+                        IntType& occupied = S[idx]; tr.access<1>();
                         if (!occupied) break;
                         tr.comp<1>();
                         if (val < occupied) { std::swap(occupied, val); tr.access<3>(); }
@@ -430,10 +430,10 @@ public:
                             retry = true;
                             break;
                         }
-                        IntType& occupied = S[--idx]; tr.access<1>();
+                        IntType& occupied = S[idx]; tr.access<1>();
                         if (!occupied) break;
                         tr.comp<1>();
-                        if (val >= occupied) { std::swap(occupied, val); tr.access<3>(); }
+                        if (val > occupied) { std::swap(occupied, val); tr.access<3>(); }
                         // (val >  occupied) leads to unstable sort
                     }
                 }

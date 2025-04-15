@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_normal_random_1
+ Sorting Method : merge
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 70.647 us
+[    0.000] Iteration  2 / 10 => 57.673 us
+[    0.000] Iteration  3 / 10 => 52.967 us
+[    0.000] Iteration  4 / 10 => 51.368 us
+[    0.000] Iteration  5 / 10 => 50.308 us
+[    0.000] Iteration  6 / 10 => 49.262 us
+[    0.000] Iteration  7 / 10 => 49.152 us
+[    0.001] Iteration  8 / 10 => 48.593 us
+[    0.001] Iteration  9 / 10 => 53.035 us
+[    0.001] Iteration 10 / 10 => 48.035 us
+[    0.001] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 531.040 us
+  Mean Elapsed Time :  53.104 us
+   # Array Accesses : 557900. / iteration
+      # Comparisons : 176550. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_bimodal_random_1
+ Sorting Method : bubble
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1538.595 us
+[    0.002] Iteration  2 / 10 => 1533.843 us
+[    0.003] Iteration  3 / 10 => 1534.302 us
+[    0.005] Iteration  4 / 10 => 1533.483 us
+[    0.006] Iteration  5 / 10 => 1536.970 us
+[    0.008] Iteration  6 / 10 => 1542.497 us
+[    0.009] Iteration  7 / 10 => 1535.323 us
+[    0.011] Iteration  8 / 10 => 1542.445 us
+[    0.012] Iteration  9 / 10 => 1531.062 us
+[    0.014] Iteration 10 / 10 => 1538.836 us
+[    0.015] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 15367.356 us
+  Mean Elapsed Time :  1536.736 us
+   # Array Accesses : 18504880. / iteration
+      # Comparisons :  5218850. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1K_uniform_gap_1
+ Sorting Method : heap
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 151.481 us
+[    0.000] Iteration  2 / 10 => 147.462 us
+[    0.000] Iteration  3 / 10 => 144.341 us
+[    0.001] Iteration  4 / 10 => 157.505 us
+[    0.001] Iteration  5 / 10 => 143.262 us
+[    0.001] Iteration  6 / 10 => 141.691 us
+[    0.001] Iteration  7 / 10 => 141.364 us
+[    0.001] Iteration  8 / 10 => 142.846 us
+[    0.001] Iteration  9 / 10 => 139.843 us
+[    0.002] Iteration 10 / 10 => 149.960 us
+[    0.002] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1024
+ Total Elapsed Time : 1459.755 us
+  Mean Elapsed Time :  145.976 us
+   # Array Accesses : 511950. / iteration
+      # Comparisons : 187170. / iteration
+==================================================

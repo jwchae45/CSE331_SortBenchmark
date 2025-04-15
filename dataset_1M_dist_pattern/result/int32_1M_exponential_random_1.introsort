@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_random_1
+ Sorting Method : introsort
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 76.110 ms
+[    0.080] Iteration  2 / 10 => 76.946 ms
+[    0.161] Iteration  3 / 10 => 76.658 ms
+[    0.240] Iteration  4 / 10 => 76.134 ms
+[    0.318] Iteration  5 / 10 => 76.436 ms
+[    0.397] Iteration  6 / 10 => 76.295 ms
+[    0.475] Iteration  7 / 10 => 76.201 ms
+[    0.554] Iteration  8 / 10 => 76.095 ms
+[    0.632] Iteration  9 / 10 => 77.037 ms
+[    0.712] Iteration 10 / 10 => 75.971 ms
+[    0.790] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 763.883 ms
+  Mean Elapsed Time :  76.388 ms
+   # Array Accesses : 492582920. / iteration
+      # Comparisons : 256766600. / iteration
+==================================================

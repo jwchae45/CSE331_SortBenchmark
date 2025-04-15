@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_random_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 209.126 ms
+[    0.213] Iteration  2 / 10 => 204.861 ms
+[    0.420] Iteration  3 / 10 => 199.179 ms
+[    0.622] Iteration  4 / 10 => 196.806 ms
+[    0.821] Iteration  5 / 10 => 196.814 ms
+[    1.020] Iteration  6 / 10 => 196.582 ms
+[    1.219] Iteration  7 / 10 => 196.834 ms
+[    1.418] Iteration  8 / 10 => 196.674 ms
+[    1.617] Iteration  9 / 10 => 196.572 ms
+[    1.816] Iteration 10 / 10 => 198.468 ms
+[    2.016] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 1991.914 ms
+  Mean Elapsed Time :  199.191 ms
+   # Array Accesses : 707496550. / iteration
+      # Comparisons : 196461890. / iteration
+==================================================

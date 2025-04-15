@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_fewunique_random_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 85.401 ms
+[    0.089] Iteration  2 / 10 => 81.342 ms
+[    0.173] Iteration  3 / 10 => 76.405 ms
+[    0.251] Iteration  4 / 10 => 77.337 ms
+[    0.331] Iteration  5 / 10 => 75.731 ms
+[    0.409] Iteration  6 / 10 => 82.663 ms
+[    0.494] Iteration  7 / 10 => 77.165 ms
+[    0.573] Iteration  8 / 10 => 76.505 ms
+[    0.652] Iteration  9 / 10 => 76.097 ms
+[    0.731] Iteration 10 / 10 => 75.932 ms
+[    0.809] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 784.579 ms
+  Mean Elapsed Time :  78.458 ms
+   # Array Accesses : 675317510. / iteration
+      # Comparisons : 180372370. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_sawtooth_1
+ Sorting Method : comb
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 82.392 ms
+[    0.086] Iteration  2 / 10 => 81.901 ms
+[    0.172] Iteration  3 / 10 => 83.450 ms
+[    0.258] Iteration  4 / 10 => 82.156 ms
+[    0.342] Iteration  5 / 10 => 82.379 ms
+[    0.427] Iteration  6 / 10 => 82.003 ms
+[    0.511] Iteration  7 / 10 => 81.864 ms
+[    0.596] Iteration  8 / 10 => 81.992 ms
+[    0.680] Iteration  9 / 10 => 81.899 ms
+[    0.764] Iteration 10 / 10 => 81.864 ms
+[    0.848] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 821.900 ms
+  Mean Elapsed Time :  82.190 ms
+   # Array Accesses : 1339585560. / iteration
+      # Comparisons :  520793580. / iteration
+==================================================

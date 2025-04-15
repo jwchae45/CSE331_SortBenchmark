@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     argparse::ArgumentParser args("benchmark");
     args.add_argument("--method")
         .required()
-        .choices("merge", "heap", "bubble", "insertion", "selection", "quick", "quick_mid", "library", "tim", "cocktail", "shaker", "comb", "tournament", "introsort");
+        .choices("merge", "heap", "bubble", "insertion", "selection", "quick", "quick_mid", "library", "tim", "cocktail", "comb", "tournament", "introsort");
     
     args.add_argument("--iteration")
         .scan<'i', std::int16_t>()
@@ -64,14 +64,19 @@ int main(int argc, char** argv) {
 
     Mount mnt(dataset + ".unsorted");
     std::unique_ptr<SortBase> sort = [&]() -> std::unique_ptr<SortBase> {
-        if (method == "bubble")    return std::make_unique<Bubble>(mnt);
-        if (method == "selection") return std::make_unique<Selection>(mnt);
-        if (method == "insertion") return std::make_unique<Insertion>(mnt);
-        if (method == "merge")     return std::make_unique<Merge>(mnt);
-        if (method == "heap")      return std::make_unique<Heap>(mnt);
-        if (method == "quick")     return std::make_unique<Quick>(mnt);
-        if (method == "quick_mid") return std::make_unique<QuickMid>(mnt);
-        if (method == "library")   return std::make_unique<Library>(mnt);
+        if (method == "bubble")     return std::make_unique<Bubble    >(mnt);
+        if (method == "selection")  return std::make_unique<Selection >(mnt);
+        if (method == "insertion")  return std::make_unique<Insertion >(mnt);
+        if (method == "merge")      return std::make_unique<Merge     >(mnt);
+        if (method == "heap")       return std::make_unique<Heap      >(mnt);
+        if (method == "quick")      return std::make_unique<Quick     >(mnt);
+        if (method == "quick_mid")  return std::make_unique<QuickMid  >(mnt);
+        if (method == "library")    return std::make_unique<Library   >(mnt);
+        if (method == "tim")        return std::make_unique<Tim       >(mnt);
+        if (method == "cocktail")   return std::make_unique<Cocktail  >(mnt);
+        if (method == "comb")       return std::make_unique<Comb      >(mnt);
+        if (method == "tournament") return std::make_unique<Tournament>(mnt);
+        if (method == "introsort")  return std::make_unique<Introsort>(mnt);
         throw std::runtime_error("Unsupported sorting metod: " + method);
     }();
 
@@ -86,7 +91,7 @@ int main(int argc, char** argv) {
     int w_iter = check_width(iter);
 
     for (std::int64_t i = 0; i < iter; ++i) {
-        if (verbose) std::cout << lapse() << "Iteration " << std::setw(w_iter) << i+1 << " / " << iter;
+        if (verbose) std::cout << lapse() << "Iteration " << std::setw(w_iter) << i+1 << " / " << iter << std::flush;
         auto bres = benchmark<ClockResolution>(sort);
         if (verbose) std::cout << " => " << bres.duration.count() << " ms\n";
         result.push_back(bres);

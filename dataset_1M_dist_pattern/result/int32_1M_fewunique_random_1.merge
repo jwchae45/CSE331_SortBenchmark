@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_fewunique_random_1
+ Sorting Method : merge
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 46.667 ms
+[    0.050] Iteration  2 / 10 => 43.221 ms
+[    0.096] Iteration  3 / 10 => 43.341 ms
+[    0.142] Iteration  4 / 10 => 43.073 ms
+[    0.187] Iteration  5 / 10 => 42.993 ms
+[    0.232] Iteration  6 / 10 => 42.723 ms
+[    0.277] Iteration  7 / 10 => 42.518 ms
+[    0.322] Iteration  8 / 10 => 42.529 ms
+[    0.367] Iteration  9 / 10 => 42.633 ms
+[    0.412] Iteration 10 / 10 => 42.241 ms
+[    0.456] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 431.939 ms
+  Mean Elapsed Time :  43.194 ms
+   # Array Accesses : 1172562400. / iteration
+      # Comparisons :  376566000. / iteration
+==================================================

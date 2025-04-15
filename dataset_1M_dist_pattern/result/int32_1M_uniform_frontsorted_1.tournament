@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_frontsorted_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 121.893 ms
+[    0.126] Iteration  2 / 10 => 121.544 ms
+[    0.249] Iteration  3 / 10 => 126.307 ms
+[    0.378] Iteration  4 / 10 => 119.572 ms
+[    0.500] Iteration  5 / 10 => 114.934 ms
+[    0.617] Iteration  6 / 10 => 115.611 ms
+[    0.735] Iteration  7 / 10 => 113.463 ms
+[    0.851] Iteration  8 / 10 => 113.567 ms
+[    0.967] Iteration  9 / 10 => 115.455 ms
+[    1.084] Iteration 10 / 10 => 113.760 ms
+[    1.201] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 1176.106 ms
+  Mean Elapsed Time :  117.611 ms
+   # Array Accesses : 621128890. / iteration
+      # Comparisons : 153278060. / iteration
+==================================================

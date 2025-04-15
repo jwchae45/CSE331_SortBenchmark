@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_random_1
+ Sorting Method : comb
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 116.050 ms
+[    0.120] Iteration  2 / 10 => 117.020 ms
+[    0.241] Iteration  3 / 10 => 116.542 ms
+[    0.359] Iteration  4 / 10 => 116.435 ms
+[    0.478] Iteration  5 / 10 => 116.236 ms
+[    0.597] Iteration  6 / 10 => 116.213 ms
+[    0.715] Iteration  7 / 10 => 115.451 ms
+[    0.833] Iteration  8 / 10 => 115.522 ms
+[    0.951] Iteration  9 / 10 => 115.906 ms
+[    1.069] Iteration 10 / 10 => 115.348 ms
+[    1.187] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 1160.723 ms
+  Mean Elapsed Time :  116.072 ms
+   # Array Accesses : 1380501290. / iteration
+      # Comparisons :  531279280. / iteration
+==================================================

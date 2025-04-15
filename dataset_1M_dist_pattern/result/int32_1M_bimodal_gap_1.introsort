@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_bimodal_gap_1
+ Sorting Method : introsort
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 76.143 ms
+[    0.080] Iteration  2 / 10 => 76.711 ms
+[    0.160] Iteration  3 / 10 => 76.648 ms
+[    0.239] Iteration  4 / 10 => 76.095 ms
+[    0.317] Iteration  5 / 10 => 75.956 ms
+[    0.396] Iteration  6 / 10 => 76.021 ms
+[    0.474] Iteration  7 / 10 => 77.369 ms
+[    0.554] Iteration  8 / 10 => 78.840 ms
+[    0.635] Iteration  9 / 10 => 77.659 ms
+[    0.715] Iteration 10 / 10 => 76.079 ms
+[    0.793] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 767.520 ms
+  Mean Elapsed Time :  76.752 ms
+   # Array Accesses : 488428080. / iteration
+      # Comparisons : 252018870. / iteration
+==================================================

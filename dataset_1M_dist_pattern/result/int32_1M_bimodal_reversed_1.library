@@ -1,0 +1,8 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_bimodal_reversed_1
+ Sorting Method : library
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1262648.363 ms
+[ 1262.652] Iteration  2 / 10

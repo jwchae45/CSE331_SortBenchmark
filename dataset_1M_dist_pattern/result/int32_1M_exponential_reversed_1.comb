@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_reversed_1
+ Sorting Method : comb
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 57.710 ms
+[    0.062] Iteration  2 / 10 => 57.091 ms
+[    0.122] Iteration  3 / 10 => 58.089 ms
+[    0.183] Iteration  4 / 10 => 57.578 ms
+[    0.243] Iteration  5 / 10 => 57.413 ms
+[    0.303] Iteration  6 / 10 => 57.552 ms
+[    0.362] Iteration  7 / 10 => 57.136 ms
+[    0.422] Iteration  8 / 10 => 57.705 ms
+[    0.482] Iteration  9 / 10 => 57.529 ms
+[    0.542] Iteration 10 / 10 => 57.385 ms
+[    0.602] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 575.187 ms
+  Mean Elapsed Time :  57.519 ms
+   # Array Accesses : 1069652160. / iteration
+      # Comparisons :  489336420. / iteration
+==================================================

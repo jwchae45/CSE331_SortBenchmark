@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_reversed_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 78.937 ms
+[    0.083] Iteration  2 / 10 => 76.036 ms
+[    0.161] Iteration  3 / 10 => 69.704 ms
+[    0.233] Iteration  4 / 10 => 71.484 ms
+[    0.307] Iteration  5 / 10 => 69.034 ms
+[    0.378] Iteration  6 / 10 => 69.377 ms
+[    0.450] Iteration  7 / 10 => 69.039 ms
+[    0.521] Iteration  8 / 10 => 69.879 ms
+[    0.594] Iteration  9 / 10 => 69.172 ms
+[    0.665] Iteration 10 / 10 => 69.250 ms
+[    0.737] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 711.912 ms
+  Mean Elapsed Time :  71.191 ms
+   # Array Accesses : 524291990. / iteration
+      # Comparisons : 104859610. / iteration
+==================================================

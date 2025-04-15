@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_bimodal_reversed_1
+ Sorting Method : introsort
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 14.418 ms
+[    0.018] Iteration  2 / 10 => 14.091 ms
+[    0.036] Iteration  3 / 10 => 14.093 ms
+[    0.052] Iteration  4 / 10 => 14.132 ms
+[    0.076] Iteration  5 / 10 => 13.886 ms
+[    0.092] Iteration  6 / 10 => 13.966 ms
+[    0.109] Iteration  7 / 10 => 14.928 ms
+[    0.126] Iteration  8 / 10 => 13.927 ms
+[    0.142] Iteration  9 / 10 => 13.926 ms
+[    0.158] Iteration 10 / 10 => 13.934 ms
+[    0.174] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 141.301 ms
+  Mean Elapsed Time :  14.130 ms
+   # Array Accesses : 205800500. / iteration
+      # Comparisons : 179574540. / iteration
+==================================================

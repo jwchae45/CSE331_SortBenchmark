@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_bimodal_bitonic_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 112.689 ms
+[    0.116] Iteration  2 / 10 => 110.655 ms
+[    0.229] Iteration  3 / 10 => 104.484 ms
+[    0.336] Iteration  4 / 10 => 103.078 ms
+[    0.441] Iteration  5 / 10 => 108.743 ms
+[    0.553] Iteration  6 / 10 => 104.525 ms
+[    0.659] Iteration  7 / 10 => 103.593 ms
+[    0.765] Iteration  8 / 10 => 102.870 ms
+[    0.870] Iteration  9 / 10 => 103.871 ms
+[    0.976] Iteration 10 / 10 => 103.471 ms
+[    1.082] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 1057.979 ms
+  Mean Elapsed Time :  105.798 ms
+   # Array Accesses : 597683030. / iteration
+      # Comparisons : 141555130. / iteration
+==================================================

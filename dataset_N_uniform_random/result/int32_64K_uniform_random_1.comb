@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_64K_uniform_random_1
+ Sorting Method : comb
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 6.034 ms
+[    0.006] Iteration  2 / 10 => 6.062 ms
+[    0.013] Iteration  3 / 10 => 5.927 ms
+[    0.019] Iteration  4 / 10 => 5.796 ms
+[    0.025] Iteration  5 / 10 => 5.906 ms
+[    0.031] Iteration  6 / 10 => 5.802 ms
+[    0.037] Iteration  7 / 10 => 5.810 ms
+[    0.042] Iteration  8 / 10 => 5.798 ms
+[    0.048] Iteration  9 / 10 => 5.803 ms
+[    0.054] Iteration 10 / 10 => 5.791 ms
+[    0.060] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 65536
+ Total Elapsed Time : 58.729 ms
+  Mean Elapsed Time :  5.873 ms
+   # Array Accesses : 71899680. / iteration
+      # Comparisons : 27962280. / iteration
+==================================================

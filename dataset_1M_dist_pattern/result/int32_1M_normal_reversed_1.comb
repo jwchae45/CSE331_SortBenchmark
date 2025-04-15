@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_normal_reversed_1
+ Sorting Method : comb
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 58.044 ms
+[    0.062] Iteration  2 / 10 => 57.478 ms
+[    0.123] Iteration  3 / 10 => 57.626 ms
+[    0.183] Iteration  4 / 10 => 57.489 ms
+[    0.243] Iteration  5 / 10 => 58.493 ms
+[    0.303] Iteration  6 / 10 => 57.396 ms
+[    0.363] Iteration  7 / 10 => 57.531 ms
+[    0.423] Iteration  8 / 10 => 57.245 ms
+[    0.482] Iteration  9 / 10 => 57.618 ms
+[    0.542] Iteration 10 / 10 => 57.180 ms
+[    0.602] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 576.099 ms
+  Mean Elapsed Time :  57.610 ms
+   # Array Accesses : 1069653060. / iteration
+      # Comparisons :  489336420. / iteration
+==================================================

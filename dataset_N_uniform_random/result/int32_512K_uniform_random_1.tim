@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_512K_uniform_random_1
+ Sorting Method : tim
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 44.052 ms
+[    0.046] Iteration  2 / 10 => 43.568 ms
+[    0.091] Iteration  3 / 10 => 43.217 ms
+[    0.135] Iteration  4 / 10 => 42.743 ms
+[    0.179] Iteration  5 / 10 => 42.256 ms
+[    0.222] Iteration  6 / 10 => 42.472 ms
+[    0.266] Iteration  7 / 10 => 42.448 ms
+[    0.309] Iteration  8 / 10 => 42.737 ms
+[    0.353] Iteration  9 / 10 => 42.491 ms
+[    0.397] Iteration 10 / 10 => 42.271 ms
+[    0.440] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 524288
+ Total Elapsed Time : 428.254 ms
+  Mean Elapsed Time :  42.825 ms
+   # Array Accesses : 342723040. / iteration
+      # Comparisons : 102819310. / iteration
+==================================================

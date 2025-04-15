@@ -156,8 +156,8 @@ public:
         for (size_t i = 0; i < sorted.size(); ++i) {
             if (sorted[i] != data[i]) {
                 if (verbose) {
-                    std::cout << "Sorted[" << i << "] = " <<   data[i] << "\n";
-                    std::cout << "Answer[" << i << "] = " << sorted[i] << "\n";
+                    std::cout << "Sorted[" << i / 4 << "] = " << reinterpret_cast<std::uint32_t*>(data.data())[i / 4] << "\n";
+                    std::cout << "Answer[" << i / 4 << "] = " << reinterpret_cast<std::uint32_t*>(sorted.data())[i / 4] << "\n";
                 }
                 return false;
             }

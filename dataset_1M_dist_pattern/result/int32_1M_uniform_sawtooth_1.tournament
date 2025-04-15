@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_sawtooth_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 101.108 ms
+[    0.105] Iteration  2 / 10 => 98.855 ms
+[    0.206] Iteration  3 / 10 => 93.207 ms
+[    0.302] Iteration  4 / 10 => 92.819 ms
+[    0.397] Iteration  5 / 10 => 93.148 ms
+[    0.492] Iteration  6 / 10 => 98.273 ms
+[    0.593] Iteration  7 / 10 => 94.454 ms
+[    0.690] Iteration  8 / 10 => 92.734 ms
+[    0.785] Iteration  9 / 10 => 93.081 ms
+[    0.880] Iteration 10 / 10 => 92.851 ms
+[    0.975] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 950.530 ms
+  Mean Elapsed Time :  95.053 ms
+   # Array Accesses : 586931450. / iteration
+      # Comparisons : 136179340. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_reversed_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 75.703 ms
+[    0.079] Iteration  2 / 10 => 73.918 ms
+[    0.156] Iteration  3 / 10 => 67.909 ms
+[    0.226] Iteration  4 / 10 => 68.031 ms
+[    0.296] Iteration  5 / 10 => 71.690 ms
+[    0.371] Iteration  6 / 10 => 68.747 ms
+[    0.442] Iteration  7 / 10 => 68.961 ms
+[    0.513] Iteration  8 / 10 => 68.252 ms
+[    0.584] Iteration  9 / 10 => 67.069 ms
+[    0.653] Iteration 10 / 10 => 69.475 ms
+[    0.725] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 699.754 ms
+  Mean Elapsed Time :  69.975 ms
+   # Array Accesses : 524289190. / iteration
+      # Comparisons : 104858210. / iteration
+==================================================

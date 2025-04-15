@@ -39,7 +39,7 @@ release: clean all
 RANDOM_SEED := 20231386
 ITERATION := 10
 METHOD := merge heap bubble insertion selection quick library tim cocktail shaker comb tournament introsort
-DISTRIBUTION := uniform normal bimodal
+DISTRIBUTION := uniform normal bimodal constant fewunique
 
 N := 1K 2K 4K 8K 16K 32K 64K 128K 256K 512K 1M
 DATASET_N_UNIFORM_RANDOM := ./dataset_N_uniform_random
@@ -48,6 +48,8 @@ DATASET_N_UNIFORM_RANDOM_FILES := $(basename $(notdir $(wildcard $(DATASET_N_UNI
 PATTERN := random almost noise reversed sawtooth bitonic frontsorted gap
 DATASET_1M_DIST_PATTERN := ./dataset_1M_dist_pattern
 DATASET_1M_DIST_PATTERN_FILES := $(basename $(notdir $(wildcard $(DATASET_1M_DIST_PATTERN)/*.unsorted)))
+
+SAMPLE_N := 1K
 
 datagen-n-uniform-random:
 	@mkdir -p $(DATASET_N_UNIFORM_RANDOM)
@@ -60,6 +62,16 @@ datagen-1m-dist-pattern:
 		$(foreach pattern, $(PATTERN), \
 			./datagen --seed=$(RANDOM_SEED) --N=1M --path=$(DATASET_1M_DIST_PATTERN) --dist=$(dist) --pattern=$(pattern);))
 	@python3 plot.py --path=$(DATASET_1M_DIST_PATTERN)
+
+datagen-pattern-samples:
+	@mkdir -p ./samples
+	@$(foreach x, $(PATTERN), ./datagen --seed=$(RANDOM_SEED) --N=$(SAMPLE_N) --dist=uniform --pattern=${x} --path=./samples;)
+	@python3 plot.py --path=./samples
+
+datagen-dist-samples:
+	@mkdir -p ./samples
+	@$(foreach x, $(DISTRIBUTION), ./datagen --seed=$(RANDOM_SEED) --N=$(SAMPLE_N) --dist=${x} --pattern=random --path=./samples;)
+	@python3 plot.py --path=./samples
 
 benchmark-n-uniform-random:
 	@mkdir -p $(DATASET_N_UNIFORM_RANDOM)/result

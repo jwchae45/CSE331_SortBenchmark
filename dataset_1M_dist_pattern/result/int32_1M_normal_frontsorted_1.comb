@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_normal_frontsorted_1
+ Sorting Method : comb
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 114.244 ms
+[    0.118] Iteration  2 / 10 => 114.268 ms
+[    0.236] Iteration  3 / 10 => 113.883 ms
+[    0.352] Iteration  4 / 10 => 113.321 ms
+[    0.468] Iteration  5 / 10 => 113.616 ms
+[    0.584] Iteration  6 / 10 => 113.323 ms
+[    0.699] Iteration  7 / 10 => 113.890 ms
+[    0.816] Iteration  8 / 10 => 113.271 ms
+[    0.931] Iteration  9 / 10 => 113.494 ms
+[    1.047] Iteration 10 / 10 => 113.374 ms
+[    1.162] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 1136.685 ms
+  Mean Elapsed Time :  113.669 ms
+   # Array Accesses : 1373834570. / iteration
+      # Comparisons :  531279280. / iteration
+==================================================

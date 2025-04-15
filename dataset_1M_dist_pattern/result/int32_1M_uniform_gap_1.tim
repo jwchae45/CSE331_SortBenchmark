@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_gap_1
+ Sorting Method : tim
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 90.566 ms
+[    0.095] Iteration  2 / 10 => 93.385 ms
+[    0.191] Iteration  3 / 10 => 89.966 ms
+[    0.283] Iteration  4 / 10 => 93.340 ms
+[    0.379] Iteration  5 / 10 => 90.052 ms
+[    0.471] Iteration  6 / 10 => 88.653 ms
+[    0.562] Iteration  7 / 10 => 88.640 ms
+[    0.653] Iteration  8 / 10 => 88.869 ms
+[    0.744] Iteration  9 / 10 => 88.135 ms
+[    0.834] Iteration 10 / 10 => 88.173 ms
+[    0.925] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 899.779 ms
+  Mean Elapsed Time :  89.978 ms
+   # Array Accesses : 718199590. / iteration
+      # Comparisons : 216227410. / iteration
+==================================================

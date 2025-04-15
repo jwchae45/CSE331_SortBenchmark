@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_constant_random_1
+ Sorting Method : library
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 164216.199 ms
+[  164.220] Iteration  2 / 10 => 164197.522 ms
+[  328.421] Iteration  3 / 10 => 164323.575 ms
+[  492.748] Iteration  4 / 10 => 163851.006 ms
+[  656.603] Iteration  5 / 10 => 163934.978 ms
+[  820.541] Iteration  6 / 10 => 163770.111 ms
+[  984.315] Iteration  7 / 10 => 163832.684 ms
+[ 1148.151] Iteration  8 / 10 => 163752.733 ms
+[ 1311.908] Iteration  9 / 10 => 163501.067 ms
+[ 1475.412] Iteration 10 / 10 => 163496.698 ms
+[ 1638.913] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 1638876.572 ms
+  Mean Elapsed Time :  163887.657 ms
+   # Array Accesses : 1827127195760. / iteration
+      # Comparisons : 1825295694940. / iteration
+==================================================

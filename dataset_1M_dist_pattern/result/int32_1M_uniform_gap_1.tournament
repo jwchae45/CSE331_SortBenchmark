@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_gap_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 202.991 ms
+[    0.207] Iteration  2 / 10 => 208.934 ms
+[    0.418] Iteration  3 / 10 => 195.057 ms
+[    0.615] Iteration  4 / 10 => 193.153 ms
+[    0.811] Iteration  5 / 10 => 191.649 ms
+[    1.004] Iteration  6 / 10 => 191.524 ms
+[    1.198] Iteration  7 / 10 => 192.162 ms
+[    1.393] Iteration  8 / 10 => 191.108 ms
+[    1.586] Iteration  9 / 10 => 191.481 ms
+[    1.780] Iteration 10 / 10 => 191.711 ms
+[    1.974] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 1949.771 ms
+  Mean Elapsed Time :  194.977 ms
+   # Array Accesses : 710267790. / iteration
+      # Comparisons : 197847510. / iteration
+==================================================

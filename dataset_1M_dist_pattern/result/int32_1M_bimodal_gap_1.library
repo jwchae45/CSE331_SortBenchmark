@@ -4,21 +4,21 @@
       Iteration : 10
 ==================================================
 [    0.000] Started
-[    0.000] Iteration  1 / 10 => 330.488 ms
-[    0.334] Iteration  2 / 10 => 328.693 ms
-[    0.665] Iteration  3 / 10 => 308.512 ms
-[    0.976] Iteration  4 / 10 => 314.094 ms
-[    1.292] Iteration  5 / 10 => 307.133 ms
-[    1.602] Iteration  6 / 10 => 307.219 ms
-[    1.911] Iteration  7 / 10 => 306.650 ms
-[    2.220] Iteration  8 / 10 => 307.116 ms
-[    2.530] Iteration  9 / 10 => 306.218 ms
-[    2.838] Iteration 10 / 10 => 306.986 ms
-[    3.147] Finished
+[    0.000] Iteration  1 / 10 => 341.143 ms
+[    0.345] Iteration  2 / 10 => 334.783 ms
+[    0.684] Iteration  3 / 10 => 320.749 ms
+[    1.009] Iteration  4 / 10 => 329.683 ms
+[    1.343] Iteration  5 / 10 => 319.375 ms
+[    1.667] Iteration  6 / 10 => 330.600 ms
+[    2.001] Iteration  7 / 10 => 319.538 ms
+[    2.325] Iteration  8 / 10 => 330.881 ms
+[    2.660] Iteration  9 / 10 => 322.257 ms
+[    2.987] Iteration 10 / 10 => 330.762 ms
+[    3.321] Finished
 ================ BENCHMARK RESULT ================
      Input Size (N) : 1048576
- Total Elapsed Time : 3123.108 ms
-  Mean Elapsed Time :  312.311 ms
-   # Array Accesses : 1023653700. / iteration
-      # Comparisons :  241512990. / iteration
+ Total Elapsed Time : 3279.772 ms
+  Mean Elapsed Time :  327.977 ms
+   # Array Accesses : 1232311240. / iteration
+      # Comparisons :  241225670. / iteration
 ==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_uniform_random_1
+ Sorting Method : cocktail
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 1354401.612 ms
+[ 1354.406] Iteration  2 / 10 => 1355055.788 ms
+[ 2709.465] Iteration  3 / 10 => 1354448.723 ms
+[ 4063.916] Iteration  4 / 10 => 1354786.425 ms
+[ 5418.705] Iteration  5 / 10 => 1352764.754 ms
+[ 6771.472] Iteration  6 / 10 => 1354587.605 ms
+[ 8126.062] Iteration  7 / 10 => 1356649.562 ms
+[ 9482.714] Iteration  8 / 10 => 1359021.223 ms
+[10841.737] Iteration  9 / 10 => 1356828.631 ms
+[12198.568] Iteration 10 / 10 => 1362937.623 ms
+[13561.508] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 13561481.948 ms
+  Mean Elapsed Time :  1356148.195 ms
+   # Array Accesses : 16486756945620. / iteration
+      # Comparisons :  4122219479070. / iteration
+==================================================

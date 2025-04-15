@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_bimodal_noise_1
+ Sorting Method : tournament
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 77.063 ms
+[    0.081] Iteration  2 / 10 => 74.348 ms
+[    0.157] Iteration  3 / 10 => 68.736 ms
+[    0.228] Iteration  4 / 10 => 68.765 ms
+[    0.300] Iteration  5 / 10 => 74.059 ms
+[    0.376] Iteration  6 / 10 => 69.020 ms
+[    0.447] Iteration  7 / 10 => 69.277 ms
+[    0.519] Iteration  8 / 10 => 68.110 ms
+[    0.589] Iteration  9 / 10 => 68.752 ms
+[    0.660] Iteration 10 / 10 => 68.586 ms
+[    0.731] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 706.717 ms
+  Mean Elapsed Time :  70.672 ms
+   # Array Accesses : 554373890. / iteration
+      # Comparisons : 119900560. / iteration
+==================================================

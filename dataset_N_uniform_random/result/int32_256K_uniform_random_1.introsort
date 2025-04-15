@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_256K_uniform_random_1
+ Sorting Method : introsort
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 17.999 ms
+[    0.019] Iteration  2 / 10 => 17.589 ms
+[    0.037] Iteration  3 / 10 => 17.434 ms
+[    0.055] Iteration  4 / 10 => 17.496 ms
+[    0.073] Iteration  5 / 10 => 18.535 ms
+[    0.093] Iteration  6 / 10 => 18.335 ms
+[    0.111] Iteration  7 / 10 => 17.814 ms
+[    0.130] Iteration  8 / 10 => 17.800 ms
+[    0.148] Iteration  9 / 10 => 17.799 ms
+[    0.166] Iteration 10 / 10 => 17.795 ms
+[    0.184] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 262144
+ Total Elapsed Time : 178.596 ms
+  Mean Elapsed Time :  17.860 ms
+   # Array Accesses : 112480480. / iteration
+      # Comparisons :  57134180. / iteration
+==================================================

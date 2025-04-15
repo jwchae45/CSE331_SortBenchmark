@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_fewunique_random_1
+ Sorting Method : library
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 36792.721 ms
+[   36.796] Iteration  2 / 10 => 36743.975 ms
+[   73.544] Iteration  3 / 10 => 36745.114 ms
+[  110.293] Iteration  4 / 10 => 36824.393 ms
+[  147.121] Iteration  5 / 10 => 36822.193 ms
+[  183.946] Iteration  6 / 10 => 36800.024 ms
+[  220.750] Iteration  7 / 10 => 36812.923 ms
+[  257.567] Iteration  8 / 10 => 36836.680 ms
+[  294.407] Iteration  9 / 10 => 36816.204 ms
+[  331.227] Iteration 10 / 10 => 36811.091 ms
+[  368.042] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 368005.319 ms
+  Mean Elapsed Time :  36800.532 ms
+   # Array Accesses : 408837707270. / iteration
+      # Comparisons : 407481469520. / iteration
+==================================================

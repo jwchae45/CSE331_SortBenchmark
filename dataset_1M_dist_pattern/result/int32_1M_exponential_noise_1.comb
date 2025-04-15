@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_noise_1
+ Sorting Method : comb
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 68.611 ms
+[    0.073] Iteration  2 / 10 => 68.231 ms
+[    0.144] Iteration  3 / 10 => 69.296 ms
+[    0.216] Iteration  4 / 10 => 68.332 ms
+[    0.287] Iteration  5 / 10 => 68.188 ms
+[    0.357] Iteration  6 / 10 => 68.701 ms
+[    0.428] Iteration  7 / 10 => 68.217 ms
+[    0.499] Iteration  8 / 10 => 68.769 ms
+[    0.570] Iteration  9 / 10 => 68.285 ms
+[    0.640] Iteration 10 / 10 => 68.195 ms
+[    0.711] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 684.825 ms
+  Mean Elapsed Time :  68.483 ms
+   # Array Accesses : 1086956660. / iteration
+      # Comparisons :  510307870. / iteration
+==================================================

@@ -1,0 +1,24 @@
+================= BENCHMARK INFO =================
+      Test Data : int32_1M_exponential_bitonic_1
+ Sorting Method : comb
+      Iteration : 10
+==================================================
+[    0.000] Started
+[    0.000] Iteration  1 / 10 => 82.266 ms
+[    0.086] Iteration  2 / 10 => 81.704 ms
+[    0.172] Iteration  3 / 10 => 83.000 ms
+[    0.258] Iteration  4 / 10 => 82.201 ms
+[    0.342] Iteration  5 / 10 => 82.176 ms
+[    0.427] Iteration  6 / 10 => 82.590 ms
+[    0.511] Iteration  7 / 10 => 81.842 ms
+[    0.596] Iteration  8 / 10 => 81.842 ms
+[    0.680] Iteration  9 / 10 => 81.733 ms
+[    0.764] Iteration 10 / 10 => 81.756 ms
+[    0.848] Finished
+================ BENCHMARK RESULT ================
+     Input Size (N) : 1048576
+ Total Elapsed Time : 821.109 ms
+  Mean Elapsed Time :  82.111 ms
+   # Array Accesses : 1341446160. / iteration
+      # Comparisons :  520793580. / iteration
+==================================================

@@ -7,7 +7,7 @@
 #include "benchmark.hpp"
 #include "verbose.hpp"
 
-using ClockResolution = std::milli;
+using ClockResolution = std::micro;
 
 template<class T>
 int check_width(const T& _data, int _precision = -1) {
@@ -93,7 +93,7 @@ int main(int argc, char** argv) {
     for (std::int64_t i = 0; i < iter; ++i) {
         if (verbose) std::cout << lapse() << "Iteration " << std::setw(w_iter) << i+1 << " / " << iter << std::flush;
         auto bres = benchmark<ClockResolution>(sort);
-        if (verbose) std::cout << " => " << bres.duration.count() << " ms\n";
+        if (verbose) std::cout << " => " << bres.duration.count() << " us\n";
         result.push_back(bres);
         mnt.reset();
     }
@@ -113,8 +113,8 @@ int main(int argc, char** argv) {
         int m_dur = check_width(std::max({mean_access, mean_comp}), 0);
         std::cout << "================ BENCHMARK RESULT ================\n"
                   << "     Input Size (N) : " << mnt.meta.size << "\n"
-                  << " Total Elapsed Time : " << total_duration << " ms\n"
-                  << "  Mean Elapsed Time : " << std::setw(w_dur) << mean_duration << " ms\n"
+                  << " Total Elapsed Time : " << total_duration << " us\n"
+                  << "  Mean Elapsed Time : " << std::setw(w_dur) << mean_duration << " us\n"
                   << std::setprecision(0)
                   << "   # Array Accesses : " << std::setw(m_dur) << mean_access << ". / iteration\n"
                   << "      # Comparisons : " << std::setw(m_dur) << mean_comp << ". / iteration\n"

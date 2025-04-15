@@ -61,7 +61,8 @@ public:
 
 private:
     std::smatch& match(const std::string& _file) {
-        static const std::regex pattern(R"((?:.*/)?int(\d+)_(\d+)([KMBT])_([a-z]+)_([a-z]+)_(\d+).*)");
+        static const std::regex pattern(R"((?:.*/)?int(\d+)_(\d+)([KMBT]?)_([a-z]+)_([a-z]+)_(\d+).*)");
+        static const std::regex pattern_no_suffix(R"((?:.*/)?int(\d+)_(\d+)_([a-z]+)_([a-z]+)_(\d+).*)");
         static std::smatch match;
         static bool executed = false;
         if (executed) return match;
@@ -181,6 +182,7 @@ std::size_t parse_suffix(const std::string& str) {
         throw std::invalid_argument("Invalid format: " + str);
     
     std::size_t number = std::stoull(match[1].str());
+    if (std::string(match[2].str()).empty()) return number;
     switch (std::toupper(match[2].str()[0])) {
     case 'T': number <<= 10; [[fallthrough]];
     case 'B': number <<= 10; [[fallthrough]];

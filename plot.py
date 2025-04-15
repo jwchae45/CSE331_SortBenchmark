@@ -37,7 +37,7 @@ for filepath in file_list:
     if ext not in ['sorted', 'unsorted']:
         continue
 
-    match = re.match(r'int(\d+)_(\d+[KMGT])_([^_]+)_([^_]+)_([^\.]+)', name_part)
+    match = re.match(r'int(\d+)_(\d+[KMGT]?)_([^_]+)_([^_]+)_([^\.]+)', name_part)
     if not match:
         continue
 
@@ -62,9 +62,12 @@ for info in tqdm(targets, desc='Generating plots'):
 
     nbits_str, size_str, dist, pattern, _ = match.groups()
     nbits = int(nbits_str)
-    size_unit = size_str[-1]
-    size_number = int(size_str[:-1])
-    size = size_number * suffix.get(size_unit, 1)
+    if size_str.isnumeric():
+        size = int(size_str)
+    else:
+        size_unit = size_str[-1]
+        size_number = int(size_str[:-1])
+        size = size_number * suffix.get(size_unit, 1)
     byte_size = nbits // 8
     dtype = np.dtype(f'<u{byte_size}')  # little endian
 
